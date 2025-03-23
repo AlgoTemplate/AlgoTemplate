@@ -8,6 +8,7 @@
 
 #### 代码模版
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include <iostream>
@@ -79,6 +80,7 @@
 
 #### 代码模版
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include<bits/stdc++.h>
@@ -163,6 +165,7 @@
 [蓝桥OJ:二维前缀和](https://www.lanqiao.cn/problems/18439/learning)
 ### 代码模板
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include <iostream>
@@ -246,6 +249,7 @@
 [蓝桥OJ:二维差分](https://www.lanqiao.cn/problems/18440/learning)
 ### 代码模板
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include <iostream>
@@ -356,10 +360,10 @@
         ```
 ## 练习题单
 
-[蓝桥OJ:求和](https://www.lanqiao.cn/problems/2080/learning)
-[蓝桥OJ:区间次方和](https://www.lanqiao.cn/problems/3382/learning)
-[蓝桥OJ:子串简写](https://www.lanqiao.cn/problems/3514/learning)
-[蓝桥OJ:信赖店铺](https://www.lanqiao.cn/problems/3646/learning/)
-[acwing:增减序列](https://www.acwing.com/problem/content/102/)
-[蓝桥OJ:棋盘](https://www.lanqiao.cn/problems/3533/learning)
+[蓝桥OJ:求和](https://www.lanqiao.cn/problems/2080/learning) \
+[蓝桥OJ:区间次方和](https://www.lanqiao.cn/problems/3382/learning) \
+[蓝桥OJ:子串简写](https://www.lanqiao.cn/problems/3514/learning) \
+[蓝桥OJ:信赖店铺](https://www.lanqiao.cn/problems/3646/learning/) \
+[acwing:增减序列](https://www.acwing.com/problem/content/102/) \
+[蓝桥OJ:棋盘](https://www.lanqiao.cn/problems/3533/learning) \
 [洛谷:领地选择](https://www.luogu.com.cn/problem/P2004)
