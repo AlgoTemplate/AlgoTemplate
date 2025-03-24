@@ -8,6 +8,7 @@
 
 #### 代码模版
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include <iostream>
@@ -79,6 +80,7 @@
 
 #### 代码模版
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include<bits/stdc++.h>
@@ -163,6 +165,7 @@
 [蓝桥OJ:二维前缀和](https://www.lanqiao.cn/problems/18439/learning)
 ### 代码模板
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include <iostream>
@@ -246,6 +249,7 @@
 [蓝桥OJ:二维差分](https://www.lanqiao.cn/problems/18440/learning)
 ### 代码模板
 ???+ example "参考实现"
+
     === "C++"
         ```c++
         #include <iostream>
