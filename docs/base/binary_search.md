@@ -389,7 +389,7 @@
 ### 模板题
 [蓝桥OJ:M次方根](https://www.lanqiao.cn/problems/1542/learning)
 
-+++ example "参考实现"
+???+ example "参考实现"
 
     === "C++"
         ```cpp
