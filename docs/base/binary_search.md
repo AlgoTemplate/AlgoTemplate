@@ -521,3 +521,19 @@
             print(f"{result:.7f}")
         ```
 ### 练习题单
+
+[蓝桥OJ:最大通过数](https://www.lanqiao.cn/problems/3346/learning)
+
+[蓝桥OJ:第K小的和](https://www.lanqiao.cn/problems/17098/learning/)
+
+[洛谷:数列分段 Section II](https://www.luogu.com.cn/problem/P1182)
+
+[洛谷:进击的奶牛](https://www.luogu.com.cn/problem/P1824)
+
+[蓝桥OJ:求阶乘](https://www.lanqiao.cn/problems/2145/learning/)
+
+[蓝桥OJ:鲜花之海【算法赛】](https://www.lanqiao.cn/problems/6282/learning)
+
+[AtCoder:Pond](https://atcoder.jp/contests/abc203/tasks/abc203_d)
+
+[洛谷:[NOIP 2001 提高组] 一元三次方程求解](https://www.luogu.com.cn/problem/P1024)
