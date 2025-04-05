@@ -6,7 +6,7 @@
 
 注：C++ 与 Python 语言有自带的 `lower_bound()` 和 `upper_bound()` 函数。
 #### 模版题
-[蓝桥OJ:整数查找](https://www.lanqiao.cn/problems/18492/learning/)
+[蓝桥OJ：整数查找](https://www.lanqiao.cn/problems/18492/learning/)
 ???+ example "参考实现"
 
     === "C++"
@@ -274,7 +274,7 @@
 ## 答案二分
 答案二分是二分的一个应用，当我们需要在一个区间内找到一个数，使得这个数满足某种性质，而这个数是单调的，我们就可以使用答案二分。
 ### 模版题
-[自建OJ:二分答案](https://hydro.ac/d/shallowdream/p/33/files)
+[自建OJ：二分答案](https://hydro.ac/d/shallowdream/p/33/files)
 ???+ example "参考实现"
 
     === "C++"
@@ -387,7 +387,7 @@
 ## 浮点数二分
 浮点数二分与整数二分的区别在于，浮点数二分的区间是一个连续的区间，而整数二分的区间是一个离散的区间，其选择的模板题实现也是基于答案二分的思想。
 ### 模板题
-[蓝桥OJ:M次方根](https://www.lanqiao.cn/problems/1542/learning)
+[蓝桥OJ：M次方根](https://www.lanqiao.cn/problems/1542/learning)
 
 ???+ example "参考实现"
 
@@ -522,18 +522,18 @@
         ```
 ### 练习题单
 
-[蓝桥OJ:最大通过数](https://www.lanqiao.cn/problems/3346/learning)
+[蓝桥OJ：最大通过数](https://www.lanqiao.cn/problems/3346/learning)
 
-[蓝桥OJ:第K小的和](https://www.lanqiao.cn/problems/17098/learning/)
+[蓝桥OJ：第K小的和](https://www.lanqiao.cn/problems/17098/learning/)
 
-[洛谷:数列分段 Section II](https://www.luogu.com.cn/problem/P1182)
+[洛谷：数列分段 Section II](https://www.luogu.com.cn/problem/P1182)
 
-[洛谷:进击的奶牛](https://www.luogu.com.cn/problem/P1824)
+[洛谷：进击的奶牛](https://www.luogu.com.cn/problem/P1824)
 
-[蓝桥OJ:求阶乘](https://www.lanqiao.cn/problems/2145/learning/)
+[蓝桥OJ：求阶乘](https://www.lanqiao.cn/problems/2145/learning/)
 
-[蓝桥OJ:鲜花之海【算法赛】](https://www.lanqiao.cn/problems/6282/learning)
+[蓝桥OJ：鲜花之海【算法赛】](https://www.lanqiao.cn/problems/6282/learning)
 
-[AtCoder:Pond](https://atcoder.jp/contests/abc203/tasks/abc203_d)
+[AtCoder：Pond](https://atcoder.jp/contests/abc203/tasks/abc203_d)
 
-[洛谷:[NOIP 2001 提高组] 一元三次方程求解](https://www.luogu.com.cn/problem/P1024)
+[洛谷：[NOIP 2001 提高组] 一元三次方程求解](https://www.luogu.com.cn/problem/P1024)
