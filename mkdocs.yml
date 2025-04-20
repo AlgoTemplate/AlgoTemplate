@@ -1,6 +1,6 @@
 # Project Information
 site_name: AlgoTemplate
-site_url: https://algotemplate.site/AlgoTemplate/
+site_url: https://algotemplate.site
 site_description: AlgoTemplate 是一个程序设计竞赛中 C++,Java,Python 语言的算法模板库。
 site_author: 浅梦
 use_directory_urls: false
