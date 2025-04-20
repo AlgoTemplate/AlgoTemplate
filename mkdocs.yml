@@ -12,6 +12,7 @@ theme:
   features:
   - navigation.tabs  # 启用顶部导航栏（标签页形式）
   - navigation.top    # 启用顶部导航栏（可选）
+  - content.code.copy # 代码复制按钮
   language: zh
   palette:
   - primary: white
