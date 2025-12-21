@@ -360,49 +360,29 @@
         ```
 ## 练习题单
 
-**一维前缀和**
+??? tip "一维前缀和"
+    - [自建OJ：求和](http://47.121.118.174/p/106)
+    - [洛谷：dx 分计算](https://www.luogu.com.cn/problem/P10233)
+    - [自建OJ：水壶](http://47.121.118.174/p/160)
+    - [自建OJ：等和三分划分方案数](http://47.121.118.174/p/513)
+    - [自建OJ：买花](http://47.121.118.174/p/170)
+    - [洛谷：分数线](https://www.luogu.com.cn/problem/B4192)
 
-[自建OJ：求和](http://47.121.118.174/p/106)
+??? tip "一维差分"
+    - [洛谷：语文成绩](https://www.luogu.com.cn/problem/P2367)
+    - [洛谷：植树节](https://www.luogu.com.cn/problem/P11853)
+    - [洛谷：Mieszanie kolorów](https://www.luogu.com.cn/problem/P9094)
+    - [自建OJ：最少操作次数](http://47.121.118.174/p/335)
+    - [洛谷：铺设道路](https://www.luogu.com.cn/problem/P5019)
+    - [洛谷：商品库存管理](https://www.luogu.com.cn/problem/P10903)
 
-[洛谷：dx 分计算](https://www.luogu.com.cn/problem/P10233)
+??? tip "二维前缀和"
+    - [洛谷：领地选择](https://www.luogu.com.cn/problem/P2004)
+    - [洛谷：最大正方形](https://www.luogu.com.cn/problem/P1387)
+    - [自建OJ：闪耀的灯光](http://47.121.118.174/p/617)
+    - [自建OJ：ROG](http://47.121.118.174/p/618)
 
-[自建OJ：水壶](http://47.121.118.174/p/160)
-
-[自建OJ：等和三分划分方案数](http://47.121.118.174/p/513)
-
-[自建OJ：买花](http://47.121.118.174/p/170)
-
-[洛谷：分数线](https://www.luogu.com.cn/problem/B4192)
-
-**一维差分**
-
-[洛谷：语文成绩](https://www.luogu.com.cn/problem/P2367)
-
-[洛谷：植树节](https://www.luogu.com.cn/problem/P11853)
-
-[洛谷：Mieszanie kolorów](https://www.luogu.com.cn/problem/P9094)
-
-[自建OJ：最少操作次数](http://47.121.118.174/p/335)
-
-[自建OJ：铺设道路](https://www.luogu.com.cn/problem/P5019)
-
-[洛谷：商品库存管理](https://www.luogu.com.cn/problem/P10903)
-
-**二维前缀和**
-
-[洛谷：领地选择](https://www.luogu.com.cn/problem/P2004)
-
-[洛谷：最大正方形](https://www.luogu.com.cn/problem/P1387)
-
-[自建OJ：闪耀的灯光](http://47.121.118.174/p/617)
-
-[自建OJ：ROG](http://47.121.118.174/p/618)
-
-**二维差分**
-
-[洛谷：地毯](https://www.luogu.com.cn/problem/P3397)
-
-[洛谷：棋盘](https://www.luogu.com.cn/problem/P13879)
-
-[洛谷：油漆面积](https://www.luogu.com.cn/problem/P8648)
-
+??? tip "二维差分"
+    - [洛谷：地毯](https://www.luogu.com.cn/problem/P3397)
+    - [洛谷：棋盘](https://www.luogu.com.cn/problem/P13879)
+    - [洛谷：油漆面积](https://www.luogu.com.cn/problem/P8648)
