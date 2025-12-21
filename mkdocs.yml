@@ -37,10 +37,13 @@ nav:
     - 一切的起点: index.md
   - 基础算法:
     - 基础算法部分简介: base/index.md
+    - 枚举: base/enumeration.md
+    - 模拟: base/simulation.md
+    - 进制转换: base/number_system.md、
+    - 位运算: base/bit_operation.md
     - 前缀和与差分: base/prefix_difference.md
     - 二分: base/binary_search.md
     - 双指针: base/two_pointer.md
-    - 位运算: base/bit_operation.md
     - 排序: base/sort.md
     - 离散化: base/discretization.md
     - 高精度: base/high_precision.md
