@@ -4,7 +4,7 @@
 
 #### 模版题
 
-[蓝桥OJ：一维前缀和](https://www.lanqiao.cn/problems/18437/learning/)
+[自建OJ：一维前缀和](http://47.121.118.174/p/79)
 
 #### 代码模版
 ???+ example "参考实现"
@@ -76,7 +76,7 @@
 
 #### 模版题
 
-[蓝桥OJ：一维差分](https://www.lanqiao.cn/problems/18438/learning/)
+[自建OJ：一维差分](http://47.121.118.174/p/22)
 
 #### 代码模版
 ???+ example "参考实现"
@@ -162,7 +162,7 @@
 ## 二维前缀和
 二维前缀和可以通过 $O(n\times m)$ 的预处理，在 $O(1)$ 的时间内求出一个子矩阵的和。
 ### 模板题
-[蓝桥OJ:二维前缀和](https://www.lanqiao.cn/problems/18439/learning)
+[自建OJ:二维前缀和](http://47.121.118.174/p/42)
 ### 代码模板
 ???+ example "参考实现"
 
@@ -246,7 +246,7 @@
 ## 二维差分
 二维差分可以通过 $O(n\times m)$ 的预处理，在 $O(1)$ 的时间内对一个子矩阵的数进行加减。
 ### 模板题
-[蓝桥OJ:二维差分](https://www.lanqiao.cn/problems/18440/learning)
+[自建OJ:二维差分](http://47.121.118.174/p/41)
 ### 代码模板
 ???+ example "参考实现"
 
@@ -360,16 +360,49 @@
         ```
 ## 练习题单
 
-[蓝桥OJ：求和](https://www.lanqiao.cn/problems/2080/learning)
+**一维前缀和**
 
-[蓝桥OJ：区间次方和](https://www.lanqiao.cn/problems/3382/learning)
+[自建OJ：求和](http://47.121.118.174/p/106)
 
-[蓝桥OJ：子串简写](https://www.lanqiao.cn/problems/3514/learning)
+[洛谷：dx 分计算](https://www.luogu.com.cn/problem/P10233)
 
-[蓝桥OJ：信赖店铺](https://www.lanqiao.cn/problems/3646/learning/)
+[自建OJ：水壶](http://47.121.118.174/p/160)
 
-[acwing：增减序列](https://www.acwing.com/problem/content/102/)
+[自建OJ：等和三分划分方案数](http://47.121.118.174/p/513)
 
-[蓝桥OJ：棋盘](https://www.lanqiao.cn/problems/3533/learning)
+[自建OJ：买花](http://47.121.118.174/p/170)
+
+[洛谷：分数线](https://www.luogu.com.cn/problem/B4192)
+
+**一维差分**
+
+[洛谷：语文成绩](https://www.luogu.com.cn/problem/P2367)
+
+[洛谷：植树节](https://www.luogu.com.cn/problem/P11853)
+
+[洛谷：Mieszanie kolorów](https://www.luogu.com.cn/problem/P9094)
+
+[自建OJ：最少操作次数](http://47.121.118.174/p/335)
+
+[自建OJ：铺设道路](https://www.luogu.com.cn/problem/P5019)
+
+[洛谷：商品库存管理](https://www.luogu.com.cn/problem/P10903)
+
+**二维前缀和**
 
 [洛谷：领地选择](https://www.luogu.com.cn/problem/P2004)
+
+[洛谷：最大正方形](https://www.luogu.com.cn/problem/P1387)
+
+[自建OJ：闪耀的灯光](http://47.121.118.174/p/617)
+
+[自建OJ：ROG](http://47.121.118.174/p/618)
+
+**二维差分**
+
+[洛谷：地毯](https://www.luogu.com.cn/problem/P3397)
+
+[洛谷：棋盘](https://www.luogu.com.cn/problem/P13879)
+
+[洛谷：油漆面积](https://www.luogu.com.cn/problem/P8648)
+
