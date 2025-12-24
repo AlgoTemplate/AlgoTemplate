@@ -2,7 +2,7 @@
 
 一维前缀和可以通过 $O(n)$ 的预处理，在 $O(1)$ 的时间内求出数组中一段区间的和。
 
-???+ info "🎥 视频讲解"
+<!-- ???+ info "🎥 视频讲解"
     <iframe 
       src="https://player.bilibili.com/player.html?bvid=BV1PbfpYbE4r"
       scrolling="no" 
@@ -11,7 +11,7 @@
       width="100%" 
       height="500">
     </iframe>
-    
+     -->
 
 #### 模版题
 
