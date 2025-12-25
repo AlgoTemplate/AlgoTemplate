@@ -1,3 +1,16 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1DhBRBPEcP"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+    
+
 ## K 进制转 10 进制
 
 将一个 K 进制数转换为 10 进制数。
@@ -5,6 +18,8 @@
 #### 模板题
 
 [自建OJ: K 进制转 10 进制](http://47.121.118.174/p/378)
+
+#### 代码模版
 
 ???+ example "参考实现"
 
@@ -93,6 +108,8 @@
 #### 模板题
 
 [自建OJ: 10 进制转 K 进制](http://47.121.118.174/p/377)
+
+#### 代码模版
 
 ???+ example "参考实现"
 
