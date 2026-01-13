@@ -1,3 +1,15 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1BTr5BuEAr"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+
 ## 枚举
 
 枚举是指用循环的方式遍历问题中的全部情况，然后一一验证是否符合要求。

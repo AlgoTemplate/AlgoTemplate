@@ -29,7 +29,7 @@ markdown_extensions:
   - pymdownx.details
   
 # Copyright
-copyright: 'Copyright &copy; 2025 - 2025 浅梦'
+copyright: 'Copyright &copy; 2025 - 2026 浅梦'
 
 # Contents
 nav:
@@ -67,14 +67,13 @@ nav:
     - 动态规划部分简介: dp/index.md
   - 数学:
     - 数学部分简介: math/index.md
-    - 进制转换: math/number_system.md
     - 快速幂: math/quick_power.md
     - 数论:
       - 数论部分简介: math/number_theory/index.md
+      - 整除与同余: math/number_theory/divisibility.md
       - 约数: math/number_theory/divisor.md
       - 素数: math/number_theory/prime.md
       - 素数筛法: math/number_theory/prime_sieve.md
-
   - 字符串:
     - 字符串部分简介: string/index.md
     - 字符串哈希: string/string_hash.md
