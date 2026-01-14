@@ -1,3 +1,15 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1Xrr7BkEd6"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+    
 ## 同余
 
 $$(a + b) \mod m = \left( (a \mod m) + (b \mod m) \right) \mod m$$
