@@ -1,3 +1,15 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1KhrxBpEXp"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+    
 ## 素数
 
 如果一个正整数 $a$ 只能被 $1$ 和 $a$ 本身整除，那么我们就称 $a$ 是一个素数。

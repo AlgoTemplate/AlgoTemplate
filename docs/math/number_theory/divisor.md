@@ -1,3 +1,15 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1Cjr4BDEQV"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+
 ## 约数
 
 如果 $a|b$，则称 $a$ 是 $b$ 的约数，$b$ 是 $a$ 的倍数。
