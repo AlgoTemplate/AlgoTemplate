@@ -60,8 +60,10 @@ nav:
     - 线段树: data_structure/segment_tree.md
   - 搜索:
     - 搜索部分简介: search/index.md
-    - 回溯: search/backtracking.md
-    - 二进制枚举: search/binary_enumeration.md
+    - 递归: search/recursion.md
+    - 全排列: search/permutation.md
+    - 子集枚举: search/subset_enumeration.md
+    - 组合枚举: search/combination_enumeration.md
     - 宽度优先搜索: search/bfs.md
   - 动态规划:
     - 动态规划部分简介: dp/index.md
