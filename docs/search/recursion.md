@@ -1,8 +1,22 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1HS65B2EDT"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+
+
 ## 递归
 
 递归是指在函数的定义中调用函数自身的方法。
 
-## 例题1
+
+#### 例题1
 
 [洛谷：求 1+2+3+...+N 的值](https://www.luogu.com.cn/problem/B2142)
 
@@ -57,7 +71,7 @@
         print(f(n))
         ```
 
-## 例题2
+#### 例题2
 
 [洛谷：求 f(x,n)](https://www.luogu.com.cn/problem/B2147)
 
@@ -117,7 +131,7 @@
         print(f"{f(x, n):.2f}")
         ```
 
-## 例题3
+#### 例题3
 
 [洛谷：Roads Around The Farm S](https://www.luogu.com.cn/problem/P2907)
 
