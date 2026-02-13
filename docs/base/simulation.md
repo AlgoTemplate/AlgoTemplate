@@ -1,3 +1,16 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1aNc8zsEhU"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+    
+
 ## 模拟
 
 模拟算法，就是严格按照题目给出的规则，一步一步“照做”，用程序把现实过程或操作过程原样复现出来。一般模拟算法对代码实现能力要求较高，需要注意细节。
