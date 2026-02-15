@@ -228,92 +228,6 @@
                 print(n & -n)
         ```
 
-
-#### 例题3
-
-[自建OJ：相或为 k](http://47.121.118.174/p/600)
-
-#### 参考代码
-
-???+ example "参考实现"
-    === "C++"
-        ```cpp
-        #include <bits/stdc++.h>
-        using namespace std;
-
-        int T, n, k, a;
-
-        int main() {
-            cin >> T;
-            while (T--) {
-                cin >> n >> k;
-                int s = 0;
-
-                while (n--) {
-                    cin >> a;
-                    // 如果 a 的所有 1 位都在 k 中
-                    if ((a & k) == a)
-                        s |= a;
-                }
-
-                if (s == k)
-                    cout << "Yes\n";
-                else
-                    cout << "No\n";
-            }
-            return 0;
-        }
-        ```
-
-    === "Java"
-        ```java
-        import java.util.Scanner;
-
-        public class Main {
-            public static void main(String[] args) {
-                Scanner sc = new Scanner(System.in);
-                int T = sc.nextInt();
-
-                while (T-- > 0) {
-                    int n = sc.nextInt();
-                    int k = sc.nextInt();
-                    int s = 0;
-
-                    for (int i = 0; i < n; i++) {
-                        int a = sc.nextInt();
-                        if ((a & k) == a) {
-                            s |= a;
-                        }
-                    }
-
-                    if (s == k)
-                        System.out.println("Yes");
-                    else
-                        System.out.println("No");
-                }
-            }
-        }
-        ```
-
-    === "Python"
-        ```python
-        T = int(input())
-
-        for _ in range(T):
-            n, k = map(int, input().split())
-            s = 0
-
-            arr = list(map(int, input().split()))
-            for a in arr:
-                if (a & k) == a:
-                    s |= a
-
-            if s == k:
-                print("Yes")
-            else:
-                print("No")
-        ```
-
 ## 练习题单
 
 ??? tip "位运算"
@@ -326,6 +240,7 @@
     - [洛谷：选数异或](https://www.luogu.com.cn/problem/P8773)
     - [洛谷：[蓝桥杯 2025 省 Python B] 异或和](https://www.luogu.com.cn/problem/P12177)
     - [洛谷：[CSP-J 2025] 异或和](https://www.luogu.com.cn/problem/P14359)
+    - [自建OJ：相或为 k](http://47.121.118.174/p/600)
    
 
 
