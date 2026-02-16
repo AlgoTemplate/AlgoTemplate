@@ -64,9 +64,10 @@ nav:
     - 全排列: search/permutation.md
     - 子集枚举: search/subset_enumeration.md
     - 组合枚举: search/combination_enumeration.md
-    - 宽度优先搜索: search/bfs.md
+    - 广度优先搜索: search/bfs.md
   - 动态规划:
     - 动态规划部分简介: dp/index.md
+    - 记忆化搜索: dp/memory_search.md
   - 数学:
     - 数学部分简介: math/index.md
     - 快速幂: math/quick_power.md
