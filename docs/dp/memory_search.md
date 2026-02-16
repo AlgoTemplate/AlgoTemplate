@@ -394,22 +394,33 @@
         ```cpp
         #include<bits/stdc++.h>
         using namespace std;
+
+        const int N = 5005;
+
         string s1, s2;
         int n, m;
-        int dfs(int x, int y){
-            if(x > n || y > m) return 0;
-            if(s1[x] == s2[y]){
+
+        int dfs(int x, int y) {
+            if (x > n || y > m) {
+                return 0;
+            }
+            if (s1[x] == s2[y]) {
                 return dfs(x + 1, y + 1) + 1;
             }
             return max(dfs(x + 1, y), dfs(x, y + 1));
         }
-        int main(){
+
+        int main() {
             cin >> s1 >> s2;
+
             n = s1.size();
             m = s2.size();
+
             s1 = " " + s1;
             s2 = " " + s2;
+
             cout << dfs(1, 1);
+
             return 0;
         }
         ```
@@ -417,44 +428,67 @@
     === "Java"
         ```java
         import java.util.Scanner;
-        public class Main{
+
+        public class Main {
+
+            static final int N = 5005;
+
             static String s1, s2;
             static int n, m;
-            static int dfs(int x, int y){
-                if(x > n || y > m) return 0;
-                if(s1.charAt(x) == s2.charAt(y)){
+
+            static int dfs(int x, int y) {
+                if (x > n || y > m) {
+                    return 0;
+                }
+                if (s1.charAt(x) == s2.charAt(y)) {
                     return dfs(x + 1, y + 1) + 1;
                 }
                 return Math.max(dfs(x + 1, y), dfs(x, y + 1));
             }
-            public static void main(String[] args){
+
+            public static void main(String[] args) {
                 Scanner sc = new Scanner(System.in);
                 s1 = sc.next();
                 s2 = sc.next();
+
                 n = s1.length();
                 m = s2.length();
+
                 s1 = " " + s1;
                 s2 = " " + s2;
+
                 System.out.println(dfs(1, 1));
             }
+
         }
         ```
 
     === "Python"
         ```python
         import sys
+
         sys.setrecursionlimit(1000000)
+
+        s1 = ""
+        s2 = ""
+        n = 0
+        m = 0
+
         s1 = input().strip()
         s2 = input().strip()
+
         n = len(s1)
         m = len(s2)
+
         s1 = " " + s1
         s2 = " " + s2
+
         def dfs(x: int, y: int) -> int:
             if x > n or y > m:
                 return 0
             if s1[x] == s2[y]:
                 return dfs(x + 1, y + 1) + 1
             return max(dfs(x + 1, y), dfs(x, y + 1))
+
         print(dfs(1, 1))
         ```
