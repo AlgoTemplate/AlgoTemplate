@@ -1,3 +1,16 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1aNc8zsEhU"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+    
+
 ## 位运算
 
 在计算机中，所有数据都是以二进制形式存储的。位运算就是直接对二进制位进行操作的运算。

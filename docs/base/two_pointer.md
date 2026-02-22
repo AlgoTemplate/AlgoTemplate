@@ -1,215 +1,369 @@
-## 快慢指针
-快慢指针指两个指针朝向同一个方向，但是一个指针比另一个指针快。
+## 左右指针
 
-#### 模板题
+左右指针是指两个指针分别从序列的两端开始，向中间移动，用来查找满足条件的元素或区间。
 
-[蓝桥OJ：最长不重复字符串](https://www.lanqiao.cn/problems/3265/learning/)
+#### 例题1
 
-???+ example "参考实现"
+[自建OJ：两数之和](http://47.121.118.174/p/54)
 
+#### 代码实现
+
+??? example "参考实现"
     === "C++"
         ```cpp
         #include<bits/stdc++.h>
         using namespace std;
 
-        const int N=1e6+10;
-        int s[N];
+        const int N = 200005;
 
-        int main()
-        {
-          string a;
-          cin>>a;
-          int res=0;
-          for(int i=0,j=0;i<a.size();i++)
-          {
-            s[a[i]]++;
-            while(s[a[i]]>1)
-            {
-              s[a[j]]--;
-              j++;
-            }
-            res=max(res,i-j+1);
-          }
-          cout<<res<<endl;
-          return 0;
-        }
-        ```
-    === "Java"
-        ```java
-        import java.util.Scanner;
-        public class Main {
-            public static void main(String[] args) {
-                Scanner sc = new Scanner(System.in);
-                String a = sc.nextLine();
-                int[] s = new int[200];
-                int res = 0;
-                for (int i = 0, j = 0; i < a.length(); i++) {
-                    s[a.charAt(i)]++;
-                    while (s[a.charAt(i)] > 1) {
-                        s[a.charAt(j)]--;
-                        j++;
-                    }
-                    res = Math.max(res, i - j + 1);
-                } 
-                System.out.println(res);
-            } 
-        }
-        ```
-    === "Python"
-        ```python
-        a=input()
-        s=[0]*200
-        res=0
-        j=0
-        for i in range(len(a)):
-            s[ord(a[i])]+=1
-            while s[ord(a[i])]>1:
-                s[ord(a[j])]-=1
-                j+=1
-            res=max(res,i-j+1)
-        print(res)
-        ```
-
-## 左右指针
-左右指针指两个指针分别指向数组的开头和结尾，然后向中间移动。
-
-#### 模板题
-[蓝桥OJ：两数之和的个数](https://www.lanqiao.cn/problems/19841/learning/)
-
-???+ example "参考实现"
-
-    === "C++"
-        ```cpp
-        #include <iostream>
-        #include <vector>
-
-        using namespace std;
+        int n, x;
+        int a[N];
 
         int main() {
-            int n, x;
             cin >> n >> x;
-            vector<int> a(n);
-            for (int i = 0; i < n; ++i) {
+
+            for (int i = 1; i <= n; i++) {
                 cin >> a[i];
             }
 
-            int left = 0; // 左指针
-            int right = n - 1; // 右指针
-            int count = 0; // 计数满足条件的对数
+            int l = 1;
+            int r = n;
+            int ans = 0;
 
-            while (left < right) {
-                int sum = a[left] + a[right];
-                if (sum == x) {
-                    // 找到一对满足条件的元素
-                    count++;
-                    left++;
-                    right--;
-                } else if (sum < x) {
-                    // 如果和小于x，移动左指针
-                    left++;
-                } else {
-                    // 如果和大于x，移动右指针
-                    right--;
+            while (l < r) {
+                if (a[l] + a[r] == x) {
+                    ans++;
+                    l++;
+                }
+                else if (a[l] + a[r] > x) {
+                    r--;
+                }
+                else {
+                    l++;
                 }
             }
 
-            cout << count << endl;
+            cout << ans;
 
             return 0;
         }
         ```
+
     === "Java"
         ```java
-        import java.io.*;
-        import java.util.*;
-        
+        import java.util.Scanner;
+
         public class Main {
-            static int N = (int)(1e5+10);
-            static int n,x;
+
+            static final int N = 200005;
+
+            static int n, x;
             static int[] a = new int[N];
+
             public static void main(String[] args) {
-                solve();
-                out.flush();
-            }
-        
-            static void solve() {
-                n = in.nextInt(); x = in.nextInt();
-                for(int i=1;i<=n;i++) {
-                    a[i] = in.nextInt();
+
+                Scanner sc = new Scanner(System.in);
+
+                n = sc.nextInt();
+                x = sc.nextInt();
+
+                for (int i = 1; i <= n; i++) {
+                    a[i] = sc.nextInt();
                 }
-                int l = 1,r = n;
+
+                int l = 1;
+                int r = n;
                 int ans = 0;
-                while(l<r) {
-                    if(a[l]+a[r]==x) {
+
+                while (l < r) {
+                    if (a[l] + a[r] == x) {
                         ans++;
                         l++;
-                    }else if(a[l]+a[r]>x){
+                    }
+                    else if (a[l] + a[r] > x) {
                         r--;
-                    }else{
+                    }
+                    else {
                         l++;
                     }
                 }
-                out.println(ans);
+
+                System.out.println(ans);
+
             }
-        
-            static FastReader in = new FastReader();
-            static PrintWriter out = new PrintWriter(System.out);
-        
-            static class FastReader {
-                static BufferedReader br;
-                static StringTokenizer st;
-        
-                FastReader() {
-                    br = new BufferedReader(new InputStreamReader(System.in));
-                }
-        
-                String next() {
-                    String str = "";
-                    while(st==null||!st.hasMoreElements()){
-                        try {
-                            str = br.readLine();
-                        }catch(IOException e){
-                            throw new RuntimeException(e);
-                        }
-                        st = new StringTokenizer(str);
-                    }
-                    return st.nextToken();
-                }
-        
-                int nextInt() {
-                    return Integer.parseInt(next());
-                }
-        
-                double nextDouble() {
-                    return Double.parseDouble(next());
-                }
-        
-                long nextLong() {
-                    return Long.parseLong(next());
-                }
-            }
+
         }
         ```
+
     === "Python"
         ```python
-        import os
         import sys
-        
-        # 请在此输入您的代码
-        n,x=map(int,input().split())
-        a=list(map(int,input().split()))
-        i=0
-        j=n-1
-        count=0
-        while i<j :
-          sum=a[j]+a[i]
-          if sum==x :
-             count +=1
-             i +=1
-             j -=1
-          else :
-            if sum<x :
-                i +=1
-            else: j-=1
-        print(count)
+
+        input = sys.stdin.readline
+
+        N = 200005
+
+        a = [0] * N
+
+        n, x = map(int, input().split())
+
+        arr = list(map(int, input().split()))
+        for i in range(1, n + 1):
+            a[i] = arr[i - 1]
+
+        l = 1
+        r = n
+        ans = 0
+
+        while l < r:
+            if a[l] + a[r] == x:
+                ans += 1
+                l += 1
+            elif a[l] + a[r] > x:
+                r -= 1
+            else:
+                l += 1
+
+        print(ans)
         ```
+
+## 快慢指针
+
+快慢指针又名滑动窗口，用一个快指针和一个慢指针同步移动，来找到符合答案的区间。
+
+#### 例题2
+
+[自建OJ：和不超过S的最长序列](http://47.121.118.174/p/820)
+
+#### 代码实现
+??? example "参考实现"
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N = 100005;
+
+        int a[N], ans = 0;
+
+        int main() {
+            int n, m;
+            cin >> n >> m;
+            for (int i = 1; i <= n; i++) {
+                cin >> a[i];
+            }
+            int l = 1, r = 0, sum = 0;
+            for (; l <= n; l++) {
+                while (r < n) {
+                    r++;
+                    sum += a[r];
+                    if (sum > m) {
+                        sum -= a[r];
+                        r--;
+                        break;
+                    }
+                }
+                ans = max(ans, r - l + 1);
+                sum -= a[l];
+            }
+            cout << ans;
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.Scanner;
+
+        public class Main {
+
+            static final int N = 100005;
+
+            static int[] a = new int[N];
+            static int ans = 0;
+
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                int n = sc.nextInt();
+                int m = sc.nextInt();
+                for (int i = 1; i <= n; i++) {
+                    a[i] = sc.nextInt();
+                }
+                int l = 1, r = 0, sum = 0;
+                for (; l <= n; l++) {
+                    while (r < n) {
+                        r++;
+                        sum += a[r];
+                        if (sum > m) {
+                            sum -= a[r];
+                            r--;
+                            break;
+                        }
+                    }
+                    ans = Math.max(ans, r - l + 1);
+                    sum -= a[l];
+                }
+                System.out.println(ans);
+            }
+
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+
+        input = sys.stdin.readline
+
+        N = 100005
+
+        a = [0] * N
+        ans = 0
+
+        n, m = map(int, input().split())
+        arr = list(map(int, input().split()))
+        for i in range(1, n + 1):
+            a[i] = arr[i - 1]
+
+        l, r, sum = 1, 0, 0
+        while l <= n:
+            while r < n:
+                r += 1
+                sum += a[r]
+                if sum > m:
+                    sum -= a[r]
+                    r -= 1
+                    break
+            ans = max(ans, r - l + 1)
+            sum -= a[l]
+            l += 1
+
+        print(ans)
+        ```
+
+
+
+#### 例题3
+
+[自建OJ：无重复字符的最长子串](http://47.121.118.174/p/74)
+
+#### 代码实现
+
+
+??? example "参考实现"
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N = 200005;
+
+        int n, ans = 0;
+        string a;
+        int cnt[200];
+
+        int main() {
+            cin >> n >> a;
+            a = " " + a;
+            int l = 1, r = 0;
+            for (; l <= n; l++) {
+                while (r < n) {
+                    r++;
+                    cnt[a[r]]++;
+                    if (cnt[a[r]] > 1) {
+                        cnt[a[r]]--;
+                        r--;
+                        break;
+                    }
+                }
+                ans = max(ans, r - l + 1);
+                cnt[a[l]]--;
+            }
+            cout << ans;
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.Scanner;
+
+        public class Main {
+
+            static final int N = 200005;
+
+            static int n, ans = 0;
+            static String a;
+            static int[] cnt = new int[200];
+
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                n = sc.nextInt();
+                a = sc.next();
+                a = " " + a;
+                int l = 1, r = 0;
+                for (; l <= n; l++) {
+                    while (r < n) {
+                        r++;
+                        cnt[a.charAt(r)]++;
+                        if (cnt[a.charAt(r)] > 1) {
+                            cnt[a.charAt(r)]--;
+                            r--;
+                            break;
+                        }
+                    }
+                    ans = Math.max(ans, r - l + 1);
+                    cnt[a.charAt(l)]--;
+                }
+                System.out.println(ans);
+            }
+
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+
+        input = sys.stdin.readline
+
+        cnt = [0] * 200
+
+        n = int(input())
+        a = input().strip()
+        a = " " + a
+
+        ans = 0
+        l, r = 1, 0
+
+        while l <= n:
+            while r < n:
+                r += 1
+                cnt[ord(a[r])] += 1
+                if cnt[ord(a[r])] > 1:
+                    cnt[ord(a[r])] -= 1
+                    r -= 1
+                    break
+            ans = max(ans, r - l + 1)
+            cnt[ord(a[l])] -= 1
+            l += 1
+
+        print(ans)
+        ```
+## 练习题单
+
+??? tip "左右指针"
+    - [自建OJ：判断字符串是否为回文](http://47.121.118.174/p/319)
+    - [洛谷：玩具](https://www.luogu.com.cn/problem/P12218)
+    - [洛谷：消消乐](https://www.luogu.com.cn/problem/P12341)
+
+??? tip "快慢指针"
+    - [自建OJ：美丽区间](http://47.121.118.174/p/436)
+    - [自建OJ：和不超过S的最长序列](http://47.121.118.174/p/820)
+    - [自建OJ：宝箱](http://47.121.118.174/p/168)
+    - [自建OJ：等腰三角形](http://47.121.118.174/p/15)
+    - [自建OJ：神奇子数组](http://47.121.118.174/p/435)
+    - [自建OJ：满足条件的子序列数量](http://47.121.118.174/p/679)
+    - [自建OJ：相似公约数](http://47.121.118.174/p/433)
+    - [自建OJ：数三角形](http://47.121.118.174/p/794)
+

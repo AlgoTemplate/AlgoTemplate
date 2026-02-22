@@ -1,3 +1,15 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1iDZKBREKs"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+    
 ## 记忆化搜索
 
 记忆化搜索是在DFS的基础上，用数组或哈希表记录已经计算过的状态，使每个状态只计算一次。
