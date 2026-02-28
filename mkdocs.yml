@@ -67,6 +67,8 @@ nav:
   - 动态规划:
     - 动态规划部分简介: dp/index.md
     - 记忆化搜索: dp/memory_search.md
+    - 背包问题:
+      - 01 背包: dp/knapsack/01_knapsack.md
   - 数学:
     - 数学部分简介: math/index.md
     - 快速幂: math/quick_power.md
