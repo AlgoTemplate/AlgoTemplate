@@ -20,7 +20,7 @@
 
         int dfs(int i, int j) {
             if (i == 0) return 0;
-            if (dp[i][j] != 0) return dp[i][j];
+            if (dp[i][j] != -1) return dp[i][j];
             int ans = 0;
             if (j >= v[i]) ans = dfs(i - 1, j - v[i]) + w[i];
             ans = max(ans, dfs(i - 1, j));
@@ -28,6 +28,7 @@
         }
 
         int main() {
+            memset(dp, -1, sizeof dp);
             cin >> n >> m;
             for (int i = 1; i <= n; i++) cin >> v[i] >> w[i];
             cout << dfs(n, m);
@@ -50,7 +51,7 @@
 
             static int dfs(int i, int j) {
                 if (i == 0) return 0;
-                if (dp[i][j] != 0) return dp[i][j];
+                if (dp[i][j] != -1) return dp[i][j];
                 int ans = 0;
                 if (j >= v[i]) ans = dfs(i - 1, j - v[i]) + w[i];
                 ans = Math.max(ans, dfs(i - 1, j));
@@ -59,6 +60,7 @@
 
             public static void main(String[] args) {
                 Scanner sc = new Scanner(System.in);
+                for (int i = 0; i < N; i++) Arrays.fill(dp[i], -1);
                 n = sc.nextInt();
                 m = sc.nextInt();
                 for (int i = 1; i <= n; i++) {
@@ -83,7 +85,7 @@
         n, m = map(int, input().split())
         v = [0] * N
         w = [0] * N
-        dp = [[0] * N for _ in range(N)]
+        dp = [[-1] * N for _ in range(N)]
 
         for i in range(1, n + 1):
             v[i], w[i] = map(int, input().split())
@@ -91,7 +93,7 @@
         def dfs(i, j):
             if i == 0:
                 return 0
-            if dp[i][j] != 0:
+            if dp[i][j] != -1:
                 return dp[i][j]
             ans = 0
             if j >= v[i]:
