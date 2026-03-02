@@ -85,6 +85,8 @@ nav:
     - 图论部分简介: graph/index.md
     - 图的存储: graph/graph_storage.md
     - 最短路: graph/shortest_path.md
+  - 蓝桥杯:
+    - 十六届CB组暴力: blue_bridge_cup/2025_16th_CB_vol1.md
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
