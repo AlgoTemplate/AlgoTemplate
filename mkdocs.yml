@@ -21,7 +21,9 @@ theme:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
-
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -87,7 +89,10 @@ nav:
     - 图的存储: graph/graph_storage.md
     - 最短路: graph/shortest_path.md
   - 蓝桥杯:
+    - 蓝桥杯零基础三十天冲刺计划: 
+      - blue_bridge_cup/30_day_plan/week1.md
     - 十六届CB组暴力: blue_bridge_cup/2025_16th_CB_vol1.md
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - js/checkin.js
