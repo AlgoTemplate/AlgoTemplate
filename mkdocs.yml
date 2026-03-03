@@ -60,9 +60,10 @@ nav:
   - 搜索:
     - 搜索部分简介: search/index.md
     - 递归: search/recursion.md
-    - 全排列: search/permutation.md
-    - 子集枚举: search/subset_enumeration.md
-    - 组合枚举: search/combination_enumeration.md
+    - 回溯:
+      - 全排列: search/backtracking/permutation.md
+      - 子集枚举: search/backtracking/subset_enumeration.md
+      - 组合枚举: search/backtracking/combination_enumeration.md
     - 广度优先搜索: search/bfs.md
   - 动态规划:
     - 动态规划部分简介: dp/index.md
