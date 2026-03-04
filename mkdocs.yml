@@ -82,13 +82,14 @@ nav:
       - 素数: math/number_theory/prime.md
       - 埃氏筛: math/number_theory/Eratosthenes_sieve.md
       - 分解质因数: math/number_theory/Prime_factor.md
-  - 字符串:
-    - 字符串部分简介: string/index.md
-    - 字符串哈希: string/string_hash.md
+      - 最大公约数与最小公倍数: math/number_theory/gcd_lcm.md
+  # - 字符串:
+  #   - 字符串部分简介: string/index.md
+  #   - 字符串哈希: string/string_hash.md
   - 图论:
     - 图论部分简介: graph/index.md
     - 图的存储: graph/graph_storage.md
-    - 最短路: graph/shortest_path.md
+    # - 最短路: graph/shortest_path.md
   - 蓝桥杯:
     - 蓝桥杯零基础三十天冲刺计划: 
       - blue_bridge_cup/30_day_plan/week1.md
