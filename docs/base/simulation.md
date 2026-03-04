@@ -279,13 +279,13 @@
 ## 练习题单
 
 ??? tip "模拟"
-    - [自建OJ：消除类游戏](http://47.121.118.174/p/546)
-    - [自建OJ：俄罗斯方块](http://47.121.118.174/p/548)
-    - [自建OJ：火车购票](http://47.121.118.174/p/555)
-    - [自建OJ：日期相加](http://47.121.118.174/p/595)
-    - [自建OJ：回文日期](http://47.121.118.174/p/599)
-    - [洛谷：不完整的算式](https://www.luogu.com.cn/problem/P12219)
-    - [洛谷：田忌赛马](https://www.luogu.com.cn/problem/B3928)
-    - [洛谷：黑白方块](https://www.luogu.com.cn/problem/B4040)
-    - [洛谷：多项式输出](https://www.luogu.com.cn/problem/P1067)
+    - [ ] [自建OJ：消除类游戏](http://47.121.118.174/p/546)
+    - [ ] [自建OJ：俄罗斯方块](http://47.121.118.174/p/548)
+    - [ ] [自建OJ：火车购票](http://47.121.118.174/p/555)
+    - [ ] [自建OJ：日期相加](http://47.121.118.174/p/595)
+    - [ ] [自建OJ：回文日期](http://47.121.118.174/p/599)
+    - [ ] [洛谷：不完整的算式](https://www.luogu.com.cn/problem/P12219)
+    - [ ] [洛谷：田忌赛马](https://www.luogu.com.cn/problem/B3928)
+    - [ ] [洛谷：黑白方块](https://www.luogu.com.cn/problem/B4040)
+    - [ ] [洛谷：多项式输出](https://www.luogu.com.cn/problem/P1067)
 

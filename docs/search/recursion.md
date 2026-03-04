@@ -217,11 +217,11 @@
 ## 练习题单
 
 ??? tip "递归"
-    - [洛谷：计算阶乘](https://www.luogu.com.cn/problem/P5739)
-    - [自建OJ：斐波拉契数列](http://47.121.118.174/p/261)
-    - [洛谷：阿克曼（Ackermann）函数](https://www.luogu.com.cn/problem/B2144)
-    - [洛谷：Hermite 多项式](https://www.luogu.com.cn/problem/B2146)
-    - [洛谷：再求 f(x,n)](https://www.luogu.com.cn/problem/B2148)
-    - [自建OJ：魔法水晶](http://47.121.118.174/p/806)
-    - [洛谷：P1010 幂次方](https://www.luogu.com.cn/problem/P1010)
+    - [ ] [洛谷：计算阶乘](https://www.luogu.com.cn/problem/P5739)
+    - [ ] [自建OJ：斐波拉契数列](http://47.121.118.174/p/261)
+    - [ ] [洛谷：阿克曼（Ackermann）函数](https://www.luogu.com.cn/problem/B2144)
+    - [ ] [洛谷：Hermite 多项式](https://www.luogu.com.cn/problem/B2146)
+    - [ ] [洛谷：再求 f(x,n)](https://www.luogu.com.cn/problem/B2148)
+    - [ ] [自建OJ：魔法水晶](http://47.121.118.174/p/806)
+    - [ ] [洛谷：P1010 幂次方](https://www.luogu.com.cn/problem/P1010)
 

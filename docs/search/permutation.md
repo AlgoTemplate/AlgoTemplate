@@ -265,5 +265,5 @@
 ## 练习题单
 
 ??? tip "全排列"
-    - [洛谷：三连击（升级版）](https://www.luogu.com.cn/problem/P1618)
+    - [ ] [洛谷：三连击（升级版）](https://www.luogu.com.cn/problem/P1618)
 

@@ -244,16 +244,16 @@
 ## 练习题单
 
 ??? tip "位运算"
-    - [自建OJ：输出二进制补码](http://47.121.118.174/p/447)
-    - [自建OJ：判断2的幂](http://47.121.118.174/p/96)
-    - [洛谷：电池分组](https://www.luogu.com.cn/problem/P12156)
-    - [洛谷：小卡和质数](https://www.luogu.com.cn/problem/P8845)
-    - [洛谷：2025](https://www.luogu.com.cn/problem/B4261)
-    - [自建OJ：前缀异或和](http://47.121.118.174/p/825)
-    - [洛谷：选数异或](https://www.luogu.com.cn/problem/P8773)
+    - [ ] [自建OJ：输出二进制补码](http://47.121.118.174/p/447)
+    - [ ] [自建OJ：判断2的幂](http://47.121.118.174/p/96)
+    - [ ] [洛谷：电池分组](https://www.luogu.com.cn/problem/P12156)
+    - [ ] [洛谷：小卡和质数](https://www.luogu.com.cn/problem/P8845)
+    - [ ] [洛谷：2025](https://www.luogu.com.cn/problem/B4261)
+    - [ ] [自建OJ：前缀异或和](http://47.121.118.174/p/825)
+    - [ ] [洛谷：选数异或](https://www.luogu.com.cn/problem/P8773)
     - [洛谷：[蓝桥杯 2025 省 Python B] 异或和](https://www.luogu.com.cn/problem/P12177)
     - [洛谷：[CSP-J 2025] 异或和](https://www.luogu.com.cn/problem/P14359)
-    - [自建OJ：相或为 k](http://47.121.118.174/p/600)
+    - [ ] [自建OJ：相或为 k](http://47.121.118.174/p/600)
    
 
 

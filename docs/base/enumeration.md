@@ -298,11 +298,11 @@
 ## 练习题单
 
 ??? tip "枚举"
-    - [洛谷：评委打分](https://www.luogu.com.cn/problem/P8830)
-    - [洛谷：最大正方形](https://www.luogu.com.cn/problem/P1387)
-    - [洛谷：涂条纹](https://www.luogu.com.cn/problem/P3392)
-    - [洛谷：黑白方块](https://www.luogu.com.cn/problem/B4040)
-    - [洛谷：回文拼接](https://www.luogu.com.cn/problem/B4039)
-    - [自建OJ：钥匙与箱子](http://47.121.118.174/p/601)
-    - [洛谷：递增三元组](https://www.luogu.com.cn/problem/P8667)
+    - [ ] [洛谷：评委打分](https://www.luogu.com.cn/problem/P8830)
+    - [ ] [洛谷：最大正方形](https://www.luogu.com.cn/problem/P1387)
+    - [ ] [洛谷：涂条纹](https://www.luogu.com.cn/problem/P3392)
+    - [ ] [洛谷：黑白方块](https://www.luogu.com.cn/problem/B4040)
+    - [ ] [洛谷：回文拼接](https://www.luogu.com.cn/problem/B4039)
+    - [ ] [自建OJ：钥匙与箱子](http://47.121.118.174/p/601)
+    - [ ] [洛谷：递增三元组](https://www.luogu.com.cn/problem/P8667)
 

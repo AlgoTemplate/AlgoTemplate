@@ -85,7 +85,7 @@
 ## 练习题单
 
 ??? tip "素数"
-    - [洛谷：素数个数](https://www.luogu.com.cn/problem/B2128)
-    - [洛谷：素数对](https://www.luogu.com.cn/problem/B2132)
-    - [洛谷：区间内的真素数](https://www.luogu.com.cn/problem/B2139)
-    - [洛谷：哥德巴赫猜想](https://www.luogu.com.cn/problem/P1304)
+    - [ ] [洛谷：素数个数](https://www.luogu.com.cn/problem/B2128)
+    - [ ] [洛谷：素数对](https://www.luogu.com.cn/problem/B2132)
+    - [ ] [洛谷：区间内的真素数](https://www.luogu.com.cn/problem/B2139)
+    - [ ] [洛谷：哥德巴赫猜想](https://www.luogu.com.cn/problem/P1304)

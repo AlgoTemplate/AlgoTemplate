@@ -66,4 +66,4 @@
 ## 练习题单
 
 ??? tip "约数"
-    - [洛谷：求正整数 2 和 n 之间的完全数](https://www.luogu.com.cn/problem/B2127)
+    - [ ] [洛谷：求正整数 2 和 n 之间的完全数](https://www.luogu.com.cn/problem/B2127)
