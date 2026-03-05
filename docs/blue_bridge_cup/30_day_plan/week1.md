@@ -32,7 +32,7 @@
     - [ ] [洛谷：哥德巴赫猜想（升级版）](https://www.luogu.com.cn/problem/P1579)（省二必会）
     - [ ] [洛谷：素数密度](https://www.luogu.com.cn/problem/P1835)（省一稳固）
     - [ ] [洛谷：质因数的个数](https://www.luogu.com.cn/problem/B4272)（省二必会）
-    - [ ] [洛谷：数的拆分](https://www.luogu.com.cn/problem/P8778)（省一稳固）
+    - [ ] [洛谷：数的拆分](https://www.luogu.com.cn/problem/P8778)（A组省一稳固）
 
 ???+ note "Day 4 最大公约数与最小公倍数、快速幂"
     - [ ] [洛谷：等差数列](https://www.luogu.com.cn/problem/P8682)（省三必会）
