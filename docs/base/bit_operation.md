@@ -251,8 +251,8 @@
     - [ ] [洛谷：2025](https://www.luogu.com.cn/problem/B4261)
     - [ ] [自建OJ：前缀异或和](http://47.121.118.174/p/825)
     - [ ] [洛谷：选数异或](https://www.luogu.com.cn/problem/P8773)
-    - [洛谷：[蓝桥杯 2025 省 Python B] 异或和](https://www.luogu.com.cn/problem/P12177)
-    - [洛谷：[CSP-J 2025] 异或和](https://www.luogu.com.cn/problem/P14359)
+    - [ ] [洛谷：[蓝桥杯 2025 省 Python B] 异或和](https://www.luogu.com.cn/problem/P12177)
+    - [ ] [洛谷：[CSP-J 2025] 异或和](https://www.luogu.com.cn/problem/P14359)
     - [ ] [自建OJ：相或为 k](http://47.121.118.174/p/600)
    
 
