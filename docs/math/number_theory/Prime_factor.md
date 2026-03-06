@@ -1,4 +1,16 @@
-## 分解质因数
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1BaPNz6EbZ"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+    
+
 
 唯一分解定理：任何一个大于 1 的整数都可以唯一分解为有限个质数的乘积，这个过程叫做分解质因数
 

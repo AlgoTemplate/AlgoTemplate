@@ -123,6 +123,10 @@
         for i in range(1,n+1):
             print(a[i],end=" ")
         ```
+
+#### 例题3
+
+[自建OJ：成绩排序](http://47.121.118.174/p/354)
 ## 练习题单
 
 ??? tip "排序"
@@ -130,3 +134,4 @@
     - [ ] [洛谷：明明的随机数](https://www.luogu.com.cn/problem/P1059)
     - [ ] [洛谷：接水](https://www.luogu.com.cn/problem/P1223)
     - [ ] [洛谷：三国游戏](https://www.luogu.com.cn/problem/P13887)
+    - [ ] [自建OJ：谁考了第k名](http://47.121.118.174/p/353)
