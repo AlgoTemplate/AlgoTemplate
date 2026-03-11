@@ -2,7 +2,7 @@
 
 ??? info "🎥 视频讲解"
     <iframe 
-      src="https://player.bilibili.com/player.html?bvid=BV1aNc8zsEhU"
+      src="https://player.bilibili.com/player.html?bvid=BV1XvZtBLERq"
       scrolling="no" 
       frameborder="0" 
       allowfullscreen="true"
