@@ -1,4 +1,4 @@
-## 视频讲解
+﻿## 视频讲解
 
 ??? info "🎥 视频讲解"
     <iframe 
@@ -297,7 +297,7 @@
 
 ## 练习题单
 
-??? tip "枚举"
+???+ tip "枚举"
     - [ ] [洛谷：评委打分](https://www.luogu.com.cn/problem/P8830)
     - [ ] [洛谷：最大正方形](https://www.luogu.com.cn/problem/P1387)
     - [ ] [洛谷：涂条纹](https://www.luogu.com.cn/problem/P3392)

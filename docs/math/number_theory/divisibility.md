@@ -1,4 +1,4 @@
-## 视频讲解
+﻿## 视频讲解
 
 ??? info "🎥 视频讲解"
     <iframe 
@@ -59,7 +59,7 @@ $$(a - b) \mod m = \left( \left( (a - b) \mod m \right) + m \right) \mod m$$
 
 ## 练习题单
 
-??? tip "整除与同余"
+???+ tip "整除与同余"
     - [ ] [洛谷：带余除法](https://www.luogu.com.cn/problem/B2010)
     - [ ] [洛谷：计算星期几](https://www.luogu.com.cn/problem/B2074)
     - [ ] [洛谷：阶乘求和](https://www.luogu.com.cn/problem/P12323)

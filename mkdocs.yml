@@ -94,7 +94,9 @@ nav:
     - 蓝桥杯零基础三十天冲刺计划: 
       - 第一周: blue_bridge_cup/30_day_plan/week1.md
       - 第二周: blue_bridge_cup/30_day_plan/week2.md
-    - 十六届CB组暴力: blue_bridge_cup/2025_16th_CB_vol1.md
+    - 十六届蓝桥杯暴力:
+      - 十六届 C++B 组暴力: blue_bridge_cup/2025_16th_CB_vol1.md
+      - 十六届 JavaB 组暴力: blue_bridge_cup/2025_16th_JB_vol1.md
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

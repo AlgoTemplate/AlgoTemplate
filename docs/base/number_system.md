@@ -1,4 +1,4 @@
-## 视频讲解
+﻿## 视频讲解
 
 ??? info "🎥 视频讲解"
     <iframe 
@@ -188,7 +188,7 @@
 
 ## 练习题单
 
-??? tip "进制转换"
+???+ tip "进制转换"
     - [ ] [洛谷：进制转换](https://www.luogu.com.cn/problem/P1143)
     - [ ] [洛谷：十进制转二进制](https://www.luogu.com.cn/problem/B2161)
     - [ ] [洛谷：二进制转十进制](https://www.luogu.com.cn/problem/B2162)

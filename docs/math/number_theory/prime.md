@@ -1,4 +1,4 @@
-## 视频讲解
+﻿## 视频讲解
 
 ??? info "🎥 视频讲解"
     <iframe 
@@ -84,7 +84,7 @@
 
 ## 练习题单
 
-??? tip "素数"
+???+ tip "素数"
     - [ ] [洛谷：素数个数](https://www.luogu.com.cn/problem/B2128)
     - [ ] [洛谷：素数对](https://www.luogu.com.cn/problem/B2132)
     - [ ] [洛谷：区间内的真素数](https://www.luogu.com.cn/problem/B2139)

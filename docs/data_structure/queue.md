@@ -1,4 +1,4 @@
-## 视频讲解
+﻿## 视频讲解
 
 ??? info "🎥 视频讲解"
     <iframe 
@@ -250,7 +250,7 @@
 
 ## 练习题单
 
-??? tip "队列"
+???+ tip "队列"
     - [ ] [洛谷：分布式队列](https://www.luogu.com.cn/problem/P11043)
     - [洛谷：[CSP-J 2019] 公交换乘](https://www.luogu.com.cn/problem/P5661)
     - [ ] [洛谷：占卜](https://www.luogu.com.cn/problem/P10457)
