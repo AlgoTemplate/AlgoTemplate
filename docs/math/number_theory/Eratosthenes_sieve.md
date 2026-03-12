@@ -88,7 +88,7 @@
 
 ???+ tip "埃式筛"
     - [ ] [洛谷：魔法科考试](https://www.luogu.com.cn/problem/P12157)
-    - [ ] [洛谷：哥德巴赫猜想（升级版）](https://www.luogu.com.cn/problem/solution/P1579)
+    - [ ] [洛谷：哥德巴赫猜想（升级版）](https://www.luogu.com.cn/problem/P1579)
     - [ ] [自建OJ：最小质因子](http://47.121.118.174/p/18)
     
 
