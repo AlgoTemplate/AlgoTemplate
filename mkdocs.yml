@@ -37,6 +37,10 @@ copyright: 'Copyright &copy; 2025 - 2026 浅梦'
 nav:
   - 简介:
     - 一切的起点: index.md
+  - 复杂度:
+    - 时间复杂度: complexity/time_complexity.md
+    - 时间复杂度的练习: complexity/time_complexity_exercise.md
+    # - 空间复杂度: complexity/space_complexity.md
   - 基础算法:
     - 基础算法部分简介: base/index.md
     - 枚举: base/enumeration.md

@@ -28,7 +28,7 @@
     - [ ] [洛谷：阶乘数码](https://www.luogu.com.cn/problem/P2388)（省二必会）
 
 ???+ note "Day 3 素数筛法与分解质因数"
-    - [ ] [洛谷：魔法科考试](https://www.luogu.com.cn/problem/P12157)（省三必会）
+    - [ ] [洛谷：魔法科考试](https://www.luogu.com.cn/problem/P12157)（省二必会）
     - [ ] [洛谷：哥德巴赫猜想（升级版）](https://www.luogu.com.cn/problem/P1579)（省二必会）
     - [ ] [洛谷：素数密度](https://www.luogu.com.cn/problem/P1835)（省一稳固）
     - [ ] [洛谷：质因数的个数](https://www.luogu.com.cn/problem/B4272)（省二必会）
