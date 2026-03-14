@@ -43,16 +43,21 @@
     - [ ] [洛谷：Hermite 多项式](https://www.luogu.com.cn/problem/B2146) （省二必会）
     - [ ] [自建OJ：魔法水晶](http://47.121.118.174/p/806) （省二必会）
 
-???+ note "Day20 全排列"
+???+ note "Day20 并查集"
+    - [ ] [自建OJ：并查集](http://47.121.118.174/p/92) （省二必会）
+    - [ ] [自建OJ：连通块中点的数量](http://47.121.118.174/p/52) （省二必会）
+    - [ ] [自建OJ：传送阵](http://47.121.118.174/p/608)（省一必会）
+    - [ ] [洛谷：村村通](https://www.luogu.com.cn/problem/P1536)
+???+ note "Day21 全排列"
     - [ ] [洛谷：带分数](https://www.luogu.com.cn/problem/P8599) （省一必会）
     - [ ] [洛谷：三连击（升级版）](https://www.luogu.com.cn/problem/P1618) （省一必会）
     - [ ] [自建OJ：旅行商问题](http://47.121.118.174/p/835) （省一必会）
 
 
-???+ note "Day21 子集枚举"
+<!-- ???+ note "Day21 子集枚举"
     - [ ] [自建OJ：选择数字之和1](http://47.121.118.174/p/832)
     - [ ] [洛谷：取数游戏](https://www.luogu.com.cn/problem/P1123)
     - [ ] [洛谷：PEKRKET](https://www.luogu.com.cn/problem/P2036)
     - [ ] [洛谷：五子棋对弈](https://www.luogu.com.cn/problem/P10386)
     - [ ] [洛谷：打开所有的灯](https://www.luogu.com.cn/problem/P2040)
-    - [ ] [自建OJ：选择数字之和3](http://47.121.118.174/p/834)
+    - [ ] [自建OJ：选择数字之和3](http://47.121.118.174/p/834) -->
