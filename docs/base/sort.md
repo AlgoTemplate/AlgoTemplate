@@ -127,6 +127,102 @@
 #### 例题3
 
 [自建OJ：成绩排序](http://47.121.118.174/p/354)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        struct stu{
+            string name;
+            int score;
+        }a[30];
+
+        int n;
+
+        bool cmp(const stu &x,const stu &y){
+            if(x.score!=y.score) return x.score>y.score;
+            return x.name<y.name;
+        }
+
+        int main(){
+            cin>>n;
+
+            for(int i=1;i<=n;i++){
+                cin>>a[i].name>>a[i].score;
+            }
+
+            sort(a+1,a+n+1,cmp);
+
+            for(int i=1;i<=n;i++){
+                cout<<a[i].name<<" "<<a[i].score<<"\n";
+            }
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main {
+
+            static class Stu{
+                String name;
+                int score;
+
+                Stu(String name,int score){
+                    this.name=name;
+                    this.score=score;
+                }
+            }
+
+            public static void main(String[] args){
+                Scanner sc=new Scanner(System.in);
+
+                int n=sc.nextInt();
+                Stu[] a=new Stu[n];
+
+                for(int i=0;i<n;i++){
+                    String name=sc.next();
+                    int score=sc.nextInt();
+                    a[i]=new Stu(name,score);
+                }
+
+                Arrays.sort(a,(x,y)->{
+                    if(x.score!=y.score) return y.score-x.score;
+                    return x.name.compareTo(y.name);
+                });
+
+                for(Stu s:a){
+                    System.out.println(s.name+" "+s.score);
+                }
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        n=int(input())
+        a=[]
+
+        for _ in range(n):
+            name,score=input().split()
+            score=int(score)
+            a.append((name,score))
+
+        a.sort(key=lambda x:(-x[1],x[0]))
+
+        for name,score in a:
+            print(name,score)
+        ```
+
+
 ## 练习题单
 
 ???+ tip "排序"
@@ -135,3 +231,7 @@
     - [ ] [洛谷：接水](https://www.luogu.com.cn/problem/P1223)
     - [ ] [洛谷：三国游戏](https://www.luogu.com.cn/problem/P13887)
     - [ ] [自建OJ：谁考了第k名](http://47.121.118.174/p/353)
+    - [ ] [自建OJ：绝对值排序](http://47.121.118.174/p/124)
+    - [ ] [自建OJ：奇偶排序](http://47.121.118.174/p/515)
+    - [ ] [自建OJ：检测点查询](http://47.121.118.174/p/593)
+
