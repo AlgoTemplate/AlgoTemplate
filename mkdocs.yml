@@ -51,6 +51,8 @@ nav:
     - 前缀和与差分:
       - 一维前缀和: base/prefix_difference/prefix_sum.md
       - 一维差分: base/prefix_difference/difference.md
+      - 二维前缀和: base/prefix_difference/prefix_sum_2d.md
+      
     - 二分: base/binary_search.md
     - 双指针: base/two_pointer.md
     - 离散化: base/discretization.md
