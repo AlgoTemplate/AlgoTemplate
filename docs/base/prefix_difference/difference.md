@@ -89,8 +89,94 @@
 
 [自建OJ：最少操作次数](http://47.121.118.174/p/335)
 
+#### 代码实现
 
-## 练习题单
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+        typedef long long ll;
+
+        const int N=1e5+5;
+
+        int a[N],b[N];
+
+        int main(){
+            int n;
+            cin>>n;
+
+            for(int i=1;i<=n;i++){
+                cin>>a[i];
+                b[i]=a[i]-a[i-1];
+            }
+
+            ll ans=0;
+
+            for(int i=1;i<=n;i++){
+                if(b[i]>0){
+                    ans+=b[i];
+                }
+            }
+
+            cout<<ans-1;
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main {
+
+            static final int N=100005;
+            static int[] a=new int[N];
+            static int[] b=new int[N];
+
+            public static void main(String[] args){
+                Scanner sc=new Scanner(System.in);
+
+                int n=sc.nextInt();
+
+                for(int i=1;i<=n;i++){
+                    a[i]=sc.nextInt();
+                    b[i]=a[i]-a[i-1];
+                }
+
+                long ans=0;
+
+                for(int i=1;i<=n;i++){
+                    if(b[i]>0){
+                        ans+=b[i];
+                    }
+                }
+
+                System.out.println(ans-1);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        n=int(input())
+        a=[0]+list(map(int,input().split()))
+        b=[0]*(n+1)
+
+        for i in range(1,n+1):
+            b[i]=a[i]-a[i-1]
+
+        ans=0
+        for i in range(1,n+1):
+            if b[i]>0:
+                ans+=b[i]
+
+        print(ans-1)
+        ```
+        
+#### 代码实现
 
 ??? tip "一维差分"
     - [ ] [洛谷：语文成绩](https://www.luogu.com.cn/problem/P2367)
