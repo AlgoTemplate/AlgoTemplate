@@ -52,7 +52,7 @@ nav:
       - 一维前缀和: base/prefix_difference/prefix_sum.md
       - 一维差分: base/prefix_difference/difference.md
       - 二维前缀和: base/prefix_difference/prefix_sum_2d.md
-      
+
     - 二分: base/binary_search.md
     - 双指针: base/two_pointer.md
     - 离散化: base/discretization.md
@@ -106,6 +106,7 @@ nav:
     - 十六届蓝桥杯暴力:
       - 十六届 C++B 组暴力: blue_bridge_cup/2025_16th_CB_vol1.md
       - 十六届 JavaB 组暴力: blue_bridge_cup/2025_16th_JB_vol1.md
+      - 十六届 C++A 组暴力: blue_bridge_cup/2025_16th_CA_vol1.md
   - 其他:
     - 快读: other/quick_read.md
 extra_javascript:
