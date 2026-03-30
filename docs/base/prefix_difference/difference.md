@@ -1,3 +1,15 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1ehwXzfEn6"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+
 ## 一维差分
 
 可以在 $O(1)$ 的时间内对区间 $[l, r]$ 中的每个数加上一个数 $c$。
