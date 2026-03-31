@@ -37,7 +37,7 @@
     - [ ] [洛谷：数的拆分](https://www.luogu.com.cn/problem/P8778)（A组省一稳固）
 
 ???+ note "Day 4 最大公约数与最小公倍数、快速幂"
-    - [ ] [洛谷：等差数列](https://www.luogu.com.cn/problem/P8682)（省三必会）
+    - [ ] [洛谷：等差数列](https://www.luogu.com.cn/problem/P8682)（省二必会）
     - [ ] [洛谷：宝石组合](https://www.luogu.com.cn/problem/P10426)（省一稳固）
     - [ ] [洛谷：序列](https://www.luogu.com.cn/problem/P12221)（省一稳固）
     - [ ] [自建OJ：黑客](http://47.121.118.174/p/564)（省一稳固）
