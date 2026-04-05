@@ -16,8 +16,19 @@ theme:
   - content.code.copy # 代码复制按钮
   language: zh
   palette:
-  - primary: white
-    
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换至亮色模式
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换至暗色模式
+        
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -121,3 +132,5 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - js/checkin.js
+extra_css:
+  - stylesheets/home.css
