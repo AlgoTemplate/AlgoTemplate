@@ -126,10 +126,14 @@ nav:
       - 十六届 PythonB 组暴力: blue_bridge_cup/16th/2025_16th_PB_vol1.md
       - 十六届 C++A 组暴力: blue_bridge_cup/16th/2025_16th_CA_vol1.md
       - 十六届 JavaA 组暴力: blue_bridge_cup/16th/2025_16th_JA_vol1.md
+    - 专项题单大合集:
+      - 枚举题单（苯环）: blue_bridge_cup/special/yevegetable_enumeration.md
     - 焚决:
       - 根据数据范围判断算法: blue_bridge_cup/other/data.md
+    
   - 其他:
     - 快读: other/quick_read.md
+    - 对拍: other/checkin.md
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
