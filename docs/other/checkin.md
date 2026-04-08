@@ -1,3 +1,14 @@
+## 视频讲解
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1oVDkB3EZa"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+
 ??? example "gen.cpp，gen.java，gen.py（数据生成器）"
     === "C++"
 
