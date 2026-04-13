@@ -1,3 +1,15 @@
+## 视频讲解
+
+??? info "🎥 视频讲解"
+    <iframe 
+      src="https://player.bilibili.com/player.html?bvid=BV1cmQtB1EXu"
+      scrolling="no" 
+      frameborder="0" 
+      allowfullscreen="true"
+      width="100%" 
+      height="500">
+    </iframe>
+
 #### 例题1
 
 [自建OJ：单点修改，区间求和](http://47.121.118.174/p/107)
