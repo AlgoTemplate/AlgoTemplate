@@ -3,9 +3,11 @@
 [自建OJ：单点修改，区间求和](http://47.121.118.174/p/107)
 
 ??? note "建树"
-    <div style="display:flex; justify-content:center;">
-        <img src="./GIF/SegmentTreeBuild.gif" style="max-width:900px; width:100%; border-radius:12px;">
-    </div>
+
+    <video controls preload="auto" style="width:100%; border-radius:12px;">
+        <source src="./MP4/SegmentTreeBuild.mp4" type="video/mp4">
+        你的浏览器不支持 video 标签
+    </video>
 
 #### 代码实现
 ??? example "参考实现"
