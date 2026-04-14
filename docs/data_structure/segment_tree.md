@@ -21,6 +21,13 @@
         你的浏览器不支持 video 标签
     </video>
 
+??? note "建树+修改"
+
+    <video controls preload="auto" style="width:100%; border-radius:12px;">
+        <source src="./MP4/SegmentTreeModify.mp4" type="video/mp4">
+        你的浏览器不支持 video 标签
+    </video>
+
 #### 代码实现
 ??? example "参考实现"
 
