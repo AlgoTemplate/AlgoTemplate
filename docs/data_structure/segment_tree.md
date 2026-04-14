@@ -220,3 +220,249 @@
             else:
                 print(query(1,1,n,x,y))
         ```
+
+#### 例题2
+
+[自建OJ：单点修改、区间最值](http://47.121.118.174/p/108)
+
+#### 代码实现
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+        const int N=2e5+10;
+
+        struct node{
+            int minv,cnt;
+        }seg[N<<2];
+
+        int n,q,a[N];
+
+        node merge(const node &l,const node &r){
+            if(l.minv<r.minv) return {l.minv,l.cnt};
+            else if(l.minv>r.minv) return {r.minv,r.cnt};
+            else return {l.minv,l.cnt+r.cnt};
+        }
+
+        void update(int id){
+            seg[id]=merge(seg[id<<1],seg[id<<1|1]);
+        }
+
+        void build(int id,int l,int r){
+            if(l==r){
+                seg[id]={a[l],1};
+                return;
+            }
+            int mid=(l+r)>>1;
+            build(id<<1,l,mid);
+            build(id<<1|1,mid+1,r);
+            update(id);
+        }
+
+        void modify(int id,int l,int r,int pos,int x){
+            if(l==r){
+                seg[id]={x,1};
+                return;
+            }
+            int mid=(l+r)>>1;
+            if(pos<=mid) modify(id<<1,l,mid,pos,x);
+            else modify(id<<1|1,mid+1,r,pos,x);
+            update(id);
+        }
+
+        node query(int id,int l,int r,int ql,int qr){
+            if(l==ql&&r==qr) return seg[id];
+            int mid=(l+r)>>1;
+            if(qr<=mid) return query(id<<1,l,mid,ql,qr);
+            else if(ql>mid) return query(id<<1|1,mid+1,r,ql,qr);
+            return merge(query(id<<1,l,mid,ql,mid),query(id<<1|1,mid+1,r,mid+1,qr));
+        }
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            cin>>n>>q;
+            for(int i=1;i<=n;i++) cin>>a[i];
+            build(1,1,n);
+
+            for(int i=1;i<=q;i++){
+                int op;cin>>op;
+                if(op==1){
+                    int x,d;cin>>x>>d;
+                    modify(1,1,n,x,d);
+                }else{
+                    int l,r;cin>>l>>r;
+                    node ans=query(1,1,n,l,r);
+                    cout<<ans.minv<<" "<<ans.cnt<<"\n";
+                }
+            }
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.io.*;
+        import java.util.*;
+
+        public class Main{
+            static final int N=200000+10;
+
+            static class Node{
+                int minv,cnt;
+                Node(int m,int c){minv=m;cnt=c;}
+            }
+
+            static Node[] seg=new Node[N<<2];
+            static int[] a=new int[N];
+            static int n,q;
+
+            static Node merge(Node l,Node r){
+                if(l.minv<r.minv) return new Node(l.minv,l.cnt);
+                else if(l.minv>r.minv) return new Node(r.minv,r.cnt);
+                else return new Node(l.minv,l.cnt+r.cnt);
+            }
+
+            static void update(int id){
+                seg[id]=merge(seg[id<<1],seg[id<<1|1]);
+            }
+
+            static void build(int id,int l,int r){
+                if(l==r){
+                    seg[id]=new Node(a[l],1);
+                    return;
+                }
+                int mid=(l+r)>>1;
+                build(id<<1,l,mid);
+                build(id<<1|1,mid+1,r);
+                update(id);
+            }
+
+            static void modify(int id,int l,int r,int pos,int x){
+                if(l==r){
+                    seg[id]=new Node(x,1);
+                    return;
+                }
+                int mid=(l+r)>>1;
+                if(pos<=mid) modify(id<<1,l,mid,pos,x);
+                else modify(id<<1|1,mid+1,r,pos,x);
+                update(id);
+            }
+
+            static Node query(int id,int l,int r,int ql,int qr){
+                if(l==ql&&r==qr) return seg[id];
+                int mid=(l+r)>>1;
+                if(qr<=mid) return query(id<<1,l,mid,ql,qr);
+                else if(ql>mid) return query(id<<1|1,mid+1,r,ql,qr);
+                return merge(query(id<<1,l,mid,ql,mid),query(id<<1|1,mid+1,r,mid+1,qr));
+            }
+
+            public static void main(String[] args)throws Exception{
+                BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+                StringTokenizer st=new StringTokenizer(br.readLine());
+                n=Integer.parseInt(st.nextToken());
+                q=Integer.parseInt(st.nextToken());
+
+                st=new StringTokenizer(br.readLine());
+                for(int i=1;i<=n;i++) a[i]=Integer.parseInt(st.nextToken());
+
+                build(1,1,n);
+
+                StringBuilder sb=new StringBuilder();
+                for(int i=1;i<=q;i++){
+                    int op=Integer.parseInt(br.readLine().trim());
+                    if(op==1){
+                        st=new StringTokenizer(br.readLine());
+                        int x=Integer.parseInt(st.nextToken());
+                        int d=Integer.parseInt(st.nextToken());
+                        modify(1,1,n,x,d);
+                    }else{
+                        st=new StringTokenizer(br.readLine());
+                        int l=Integer.parseInt(st.nextToken());
+                        int r=Integer.parseInt(st.nextToken());
+                        Node ans=query(1,1,n,l,r);
+                        sb.append(ans.minv).append(" ").append(ans.cnt).append('\n');
+                    }
+                }
+                System.out.print(sb.toString());
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        N=200000+10
+        a=[0]*N
+        seg=[(0,0)]*(N<<2)
+
+        def merge(l,r):
+            if l[0]<r[0]:
+                return (l[0],l[1])
+            elif l[0]>r[0]:
+                return (r[0],r[1])
+            else:
+                return (l[0],l[1]+r[1])
+
+        def update(id):
+            seg[id]=merge(seg[id<<1],seg[id<<1|1])
+
+        def build(id,l,r):
+            if l==r:
+                seg[id]=(a[l],1)
+                return
+            mid=(l+r)//2
+            build(id<<1,l,mid)
+            build(id<<1|1,mid+1,r)
+            update(id)
+
+        def modify(id,l,r,pos,x):
+            if l==r:
+                seg[id]=(x,1)
+                return
+            mid=(l+r)//2
+            if pos<=mid:
+                modify(id<<1,l,mid,pos,x)
+            else:
+                modify(id<<1|1,mid+1,r,pos,x)
+            update(id)
+
+        def query(id,l,r,ql,qr):
+            if l==ql and r==qr:
+                return seg[id]
+            mid=(l+r)//2
+            if qr<=mid:
+                return query(id<<1,l,mid,ql,qr)
+            elif ql>mid:
+                return query(id<<1|1,mid+1,r,ql,qr)
+            else:
+                return merge(query(id<<1,l,mid,ql,mid),query(id<<1|1,mid+1,r,mid+1,qr))
+
+        n,q=map(int,input().split())
+        arr=list(map(int,input().split()))
+        for i in range(1,n+1):
+            a[i]=arr[i-1]
+
+        build(1,1,n)
+
+        for _ in range(q):
+            op=int(input())
+            if op==1:
+                x,d=map(int,input().split())
+                modify(1,1,n,x,d)
+            else:
+                l,r=map(int,input().split())
+                ans=query(1,1,n,l,r)
+                print(ans[0],ans[1])
+        ```
+## 练习题单
+
+- [ ] [自建OJ：区间修改、单点查询](http://47.121.118.174/p/58)
+- [ ] [自建OJ：加弦](http://47.121.118.174/p/686)
+- [ ] [洛谷：最大数](https://www.luogu.com.cn/problem/P1198)
+- [ ] [自建OJ：区间最大子段和](http://47.121.118.174/p/110)
