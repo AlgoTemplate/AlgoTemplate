@@ -154,7 +154,6 @@
             }
 
             public static void main(String[] args) throws Exception {
-                // 使用 FastReader 防止读取瓶颈
                 FastReader fr = new FastReader(System.in);
                 n = fr.nextInt();
                 q = fr.nextInt();
@@ -169,13 +168,11 @@
                     if (op == 1) {
                         int x = fr.nextInt();
                         int d = fr.nextInt();
-                        // 某些题目下标从0开始，请根据题目调整
-                        modify(1, 1, n, x + 1, d); 
+                        modify(1, 1, n, x, d); 
                     } else {
                         int l = fr.nextInt();
                         int r = fr.nextInt();
-                        // 这里的范围通常是 [l, r)，取决于题目
-                        Node ans = query(1, 1, n, l + 1, r); 
+                        Node ans = query(1, 1, n, l, r); 
                         out.println(ans.minv + " " + ans.cnt);
                     }
                 }
