@@ -98,67 +98,99 @@
         import java.io.*;
         import java.util.*;
 
-        public class Main{
-            static final int N=200000+10;
-            static int[] a=new int[N];
-            static long[] sum=new long[N<<2];
-            static int n,q;
+        public class Main {
+            static final int N = 200005;
 
-            static void update(int id){
-                sum[id]=sum[id<<1]+sum[id<<1|1];
+            static class Node {
+                int minv, cnt;
+                Node(int m, int c) { minv = m; cnt = c; }
             }
 
-            static void build(int id,int l,int r){
-                if(l==r){
-                    sum[id]=a[l];
+            static Node[] seg = new Node[N << 2];
+            static int[] a = new int[N];
+            static int n, q;
+
+            static Node merge(Node l, Node r) {
+                if (l == null) return r;
+                if (r == null) return l;
+                if (l.minv < r.minv) return new Node(l.minv, l.cnt);
+                else if (l.minv > r.minv) return new Node(r.minv, r.cnt);
+                else return new Node(l.minv, l.cnt + r.cnt);
+            }
+
+            static void update(int id) {
+                seg[id] = merge(seg[id << 1], seg[id << 1 | 1]);
+            }
+
+            static void build(int id, int l, int r) {
+                if (l == r) {
+                    seg[id] = new Node(a[l], 1);
                     return;
                 }
-                int mid=(l+r)>>1;
-                build(id<<1,l,mid);
-                build(id<<1|1,mid+1,r);
+                int mid = (l + r) >> 1;
+                build(id << 1, l, mid);
+                build(id << 1 | 1, mid + 1, r);
                 update(id);
             }
 
-            static void modify(int id,int l,int r,int pos,int x){
-                if(l==r){
-                    sum[id]+=x;
+            static void modify(int id, int l, int r, int pos, int x) {
+                if (l == r) {
+                    seg[id] = new Node(x, 1);
                     return;
                 }
-                int mid=(l+r)>>1;
-                if(pos<=mid) modify(id<<1,l,mid,pos,x);
-                else modify(id<<1|1,mid+1,r,pos,x);
+                int mid = (l + r) >> 1;
+                if (pos <= mid) modify(id << 1, l, mid, pos, x);
+                else modify(id << 1 | 1, mid + 1, r, pos, x);
                 update(id);
             }
 
-            static long query(int id,int l,int r,int ql,int qr){
-                if(l==ql&&r==qr) return sum[id];
-                int mid=(l+r)>>1;
-                if(qr<=mid) return query(id<<1,l,mid,ql,qr);
-                else if(ql>mid) return query(id<<1|1,mid+1,r,ql,qr);
-                else return query(id<<1,l,mid,ql,mid)+query(id<<1|1,mid+1,r,mid+1,qr);
+            static Node query(int id, int l, int r, int ql, int qr) {
+                if (ql <= l && r <= qr) return seg[id];
+                int mid = (l + r) >> 1;
+                Node res = null;
+                if (ql <= mid) res = merge(res, query(id << 1, l, mid, ql, qr));
+                if (qr > mid) res = merge(res, query(id << 1 | 1, mid + 1, r, ql, qr));
+                return res;
             }
 
-            public static void main(String[] args)throws Exception{
-                BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-                StringTokenizer st=new StringTokenizer(br.readLine());
-                n=Integer.parseInt(st.nextToken());
-                q=Integer.parseInt(st.nextToken());
+            public static void main(String[] args) throws Exception {
+                // 使用 FastReader 防止读取瓶颈
+                FastReader fr = new FastReader(System.in);
+                n = fr.nextInt();
+                q = fr.nextInt();
 
-                st=new StringTokenizer(br.readLine());
-                for(int i=1;i<=n;i++) a[i]=Integer.parseInt(st.nextToken());
+                for (int i = 1; i <= n; i++) a[i] = fr.nextInt();
 
-                build(1,1,n);
+                build(1, 1, n);
 
-                StringBuilder sb=new StringBuilder();
-                for(int i=1;i<=q;i++){
-                    st=new StringTokenizer(br.readLine());
-                    int op=Integer.parseInt(st.nextToken());
-                    int x=Integer.parseInt(st.nextToken());
-                    int y=Integer.parseInt(st.nextToken());
-                    if(op==1) modify(1,1,n,x,y);
-                    else sb.append(query(1,1,n,x,y)).append('\n');
+                PrintWriter out = new PrintWriter(System.out);
+                while (q-- > 0) {
+                    int op = fr.nextInt();
+                    if (op == 1) {
+                        int x = fr.nextInt();
+                        int d = fr.nextInt();
+                        // 某些题目下标从0开始，请根据题目调整
+                        modify(1, 1, n, x + 1, d); 
+                    } else {
+                        int l = fr.nextInt();
+                        int r = fr.nextInt();
+                        // 这里的范围通常是 [l, r)，取决于题目
+                        Node ans = query(1, 1, n, l + 1, r); 
+                        out.println(ans.minv + " " + ans.cnt);
+                    }
                 }
-                System.out.print(sb.toString());
+                out.flush();
+            }
+
+            static class FastReader {
+                StringTokenizer st;
+                BufferedReader br;
+                public FastReader(InputStream s) { br = new BufferedReader(new InputStreamReader(s)); }
+                public String next() throws Exception {
+                    while (st == null || !st.hasMoreElements()) st = new StringTokenizer(br.readLine());
+                    return st.nextToken();
+                }
+                public int nextInt() throws Exception { return Integer.parseInt(next()); }
             }
         }
         ```
