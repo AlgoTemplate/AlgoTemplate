@@ -48,6 +48,7 @@
     - [ ] [自建OJ：连通块中点的数量](http://47.121.118.174/p/52) （省二必会）
     - [ ] [自建OJ：传送阵](http://47.121.118.174/p/608)（省一必会）
     - [ ] [洛谷：村村通](https://www.luogu.com.cn/problem/P1536)（省一必会）
+    
 ???+ note "Day21 全排列"
     - [ ] [洛谷：带分数](https://www.luogu.com.cn/problem/P8599) （省一必会）
     - [ ] [洛谷：三连击（升级版）](https://www.luogu.com.cn/problem/P1618) （省一必会）
