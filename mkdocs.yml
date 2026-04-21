@@ -91,6 +91,9 @@ nav:
     - 记忆化搜索: dp/memory_search.md
     - 背包问题:
       - 01 背包: dp/knapsack/01_knapsack.md
+    - dp 基础题专讲: 
+      - 简介: dp/dp_problem/index.md
+      - 基础 30 题系列1: dp/dp_problem/dp_problem1.md
   - 数学:
     - 数学部分简介: math/index.md
     - 快速幂: math/quick_power.md
