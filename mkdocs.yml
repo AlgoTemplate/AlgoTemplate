@@ -122,9 +122,10 @@ nav:
       - 基础算法: blue_bridge_cup/all/base.md
       - 动态规划: blue_bridge_cup/all/dp.md
       - 字符串: blue_bridge_cup/all/string.md
-      - 数据结构: blue_bridge_cup/all/data_structure.md
+      - 数据结构: blue_bridge_cup/all/ds.md
       - 图论: blue_bridge_cup/all/graph.md
       - 数学: blue_bridge_cup/all/math.md
+      - 搜索: blue_bridge_cup/all/search.md
       - 贪心与思维: blue_bridge_cup/all/greedy.md
     - 十七届蓝桥杯:
       - 十七届蓝桥杯模拟赛（一）: blue_bridge_cup/2026_17th_vol1.md
