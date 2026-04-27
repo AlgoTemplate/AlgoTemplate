@@ -119,6 +119,7 @@ nav:
       - 第三周: blue_bridge_cup/30_day_plan/week3.md
       - 第四周: blue_bridge_cup/30_day_plan/week4.md
     - 蓝桥杯国赛冲刺计划: 
+      - 简介: blue_bridge_cup/all/index.md
       - 基础算法: blue_bridge_cup/all/base.md
       - 动态规划: blue_bridge_cup/all/dp.md
       - 字符串: blue_bridge_cup/all/string.md
