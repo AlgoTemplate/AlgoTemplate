@@ -3,3 +3,7 @@
 
 ???+ note "树的遍历"
     - [ ] [洛谷：[蓝桥杯 2023 国 A] 相连的边](https://www.luogu.com.cn/problem/P10418)（国二必会）
+
+
+???+ note "最小生成树"
+    - [ ] [洛谷：[蓝桥杯 2023 国 Java B] 电动车](https://www.luogu.com.cn/problem/P12222)（国一必会）

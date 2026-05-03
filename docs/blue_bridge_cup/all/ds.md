@@ -13,4 +13,9 @@
     - [ ] [洛谷：[蓝桥杯 2024 国 A] 兔子集结](https://www.luogu.com.cn/problem/P10577)（国二必会）
     - [ ] [洛谷：星座导航校准器](https://www.luogu.com.cn/problem/P16272)（国一必会）
   
+???+ note "单调队列"
+    - [ ] [洛谷：[蓝桥杯 2023 国 Java B] 游戏](https://www.luogu.com.cn/problem/P12225)（国一必会（线段树、st表也能解决））
 
+
+???+ note "线段树"
+    - [ ] [洛谷：[蓝桥杯 2023 国 Java B] 游戏](https://www.luogu.com.cn/problem/P12225)（国一必会（单调队列、st表也能解决））
