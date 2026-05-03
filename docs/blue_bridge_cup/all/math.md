@@ -1,8 +1,11 @@
-???+ note "约数、素数、素数筛、唯一分解定理"
+???+ note "同余、约数、素数、素数筛、唯一分解定理"
     - [ ] [洛谷：[蓝桥杯 2023 国 B] 双子数](https://www.luogu.com.cn/problem/P9420)（国三必会）
     - [ ] [洛谷：[蓝桥杯 2023 国 A] 切割](https://www.luogu.com.cn/problem/P10415)（国三必会）
     - [ ] [洛谷：[蓝桥杯 2023 国 Java A] 躲炮弹](https://www.luogu.com.cn/problem/P12235)（国二必会）
+    - [ ] [洛谷：[蓝桥杯 2024 国 Python B] 儿童数](https://www.luogu.com.cn/problem/P12267)（国二必会）
+    - [ ] [洛谷：[蓝桥杯 2024 国 Python B] 全 X 数](https://www.luogu.com.cn/problem/P12272)（国一必会（50分））
 ???+ note "最大公约数、最小公倍数"
+    - [ ] [洛谷：[蓝桥杯 2024 国 Java B] 美丽区间](https://www.luogu.com.cn/problem/P12254)（国三必会）
     - [ ] [自建OJ：序列](http://47.121.118.174/p/176)（国二必会）
 ???+ note "快速幂、逆元"
     - [ ] [洛谷：[蓝桥杯 2023 国 Java B] 互质](https://www.luogu.com.cn/problem/P12216)（国三必会）
