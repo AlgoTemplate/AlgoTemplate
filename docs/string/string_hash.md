@@ -14,13 +14,14 @@
 
         const int N=200010;
         const ll P=131;
+        const ll mod=998244353;
 
         ll prefix[N],powP[N];
         int n,q;
         string s;
 
         ll getHash(int l,int r){
-            return prefix[r]-prefix[l-1]*powP[r-l+1];
+            return (prefix[r]-prefix[l-1]*powP[r-l+1]%mod+mod)%mod;
         }
 
         int main(){
@@ -33,8 +34,8 @@
 
             powP[0]=1;
             for(int i=1;i<=n;i++){
-                powP[i]=powP[i-1]*P;
-                prefix[i]=prefix[i-1]*P+s[i];
+                powP[i]=powP[i-1]*P%mod;
+                prefix[i]=(prefix[i-1]*P+s[i])%mod;
             }
 
             while(q--){
@@ -57,12 +58,13 @@
         public class Main{
             static final int N=200010;
             static final long P=131;
+            static final long mod=998244353;
 
             static long[] prefix=new long[N];
             static long[] powP=new long[N];
 
             static long getHash(int l,int r){
-                return prefix[r]-prefix[l-1]*powP[r-l+1];
+                return (prefix[r]-prefix[l-1]*powP[r-l+1]%mod+mod)%mod;
             }
 
             public static void main(String[] args)throws Exception{
@@ -76,8 +78,8 @@
 
                 powP[0]=1;
                 for(int i=1;i<=n;i++){
-                    powP[i]=powP[i-1]*P;
-                    prefix[i]=prefix[i-1]*P+s.charAt(i);
+                    powP[i]=powP[i-1]*P%mod;
+                    prefix[i]=(prefix[i-1]*P+s.charAt(i))%mod;
                 }
 
                 StringBuilder sb=new StringBuilder();
@@ -105,20 +107,21 @@
 
         N=200010
         P=131
+        mod=998244353
 
         prefix=[0]*N
         powP=[0]*N
 
         def getHash(l,r):
-            return prefix[r]-prefix[l-1]*powP[r-l+1]
+            return (prefix[r]-prefix[l-1]*powP[r-l+1]%mod+mod)%mod
 
         n,q=map(int,input().split())
         s=" "+input().strip()
 
         powP[0]=1
         for i in range(1,n+1):
-            powP[i]=powP[i-1]*P
-            prefix[i]=prefix[i-1]*P+ord(s[i])
+            powP[i]=powP[i-1]*P%mod
+            prefix[i]=(prefix[i-1]*P+ord(s[i]))%mod
 
         for _ in range(q):
             l1,r1,l2,r2=map(int,input().split())
