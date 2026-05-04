@@ -209,3 +209,99 @@
 
             print(dp[n][0])
         ```
+#### 第三题
+
+[自建OJ：选数异或](http://47.121.118.174/p/465)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N=1e5+10;
+        const int MOD=998244353;
+
+        int n,x;
+        int a[N];
+        int dp[N][70];
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            cin>>n>>x;
+            for(int i=1;i<=n;i++) cin>>a[i];
+
+            dp[0][0]=1;
+
+            for(int i=1;i<=n;i++){
+                for(int j=0;j<=63;j++){
+                    dp[i][j]=(dp[i-1][j]+dp[i-1][j^a[i]])%MOD;
+                }
+            }
+
+            cout<<dp[n][x]<<"\n";
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.io.*;
+        import java.util.*;
+
+        public class Main{
+            static final int N=100010;
+            static final int MOD=998244353;
+
+            static int[] a=new int[N];
+            static int[][] dp=new int[N][70];
+
+            public static void main(String[] args)throws Exception{
+                BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+                StringTokenizer st=new StringTokenizer(br.readLine());
+
+                int n=Integer.parseInt(st.nextToken());
+                int x=Integer.parseInt(st.nextToken());
+
+                st=new StringTokenizer(br.readLine());
+                for(int i=1;i<=n;i++){
+                    a[i]=Integer.parseInt(st.nextToken());
+                }
+
+                dp[0][0]=1;
+
+                for(int i=1;i<=n;i++){
+                    for(int j=0;j<=63;j++){
+                        dp[i][j]=(dp[i-1][j]+dp[i-1][j^a[i]])%MOD;
+                    }
+                }
+
+                System.out.print(dp[n][x]);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        MOD=998244353
+
+        n,x=map(int,input().split())
+        a=[0]+list(map(int,input().split()))
+
+        dp=[[0]*70 for _ in range(n+1)]
+        dp[0][0]=1
+
+        for i in range(1,n+1):
+            for j in range(64):
+                dp[i][j]=(dp[i-1][j]+dp[i-1][j^a[i]])%MOD
+
+        print(dp[n][x])
+        ```
