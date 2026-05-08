@@ -305,3 +305,127 @@
 
         print(dp[n][x])
         ```
+#### 第四题
+
+[自建OJ：砝码称重](http://47.121.118.174/p/553)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N=1e2+10;
+
+        int w[N],dp[N][100010];
+        int n;
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            cin>>n;
+
+            int sum=0;
+            for(int i=1;i<=n;i++){
+                cin>>w[i];
+                sum+=w[i];
+            }
+
+            dp[0][0]=1;
+
+            for(int i=1;i<=n;i++){
+                for(int j=0;j<=sum;j++){
+                    dp[i][j]|=dp[i-1][j];
+                    dp[i][j]|=dp[i-1][abs(j-w[i])];
+                    if(j+w[i]<=sum){
+                        dp[i][j]|=dp[i-1][j+w[i]];
+                    }
+                }
+            }
+
+            int ans=0;
+            for(int i=1;i<=sum;i++){
+                if(dp[n][i]) ans++;
+            }
+
+            cout<<ans;
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.io.*;
+        import java.util.*;
+
+        public class Main{
+            static final int N=110;
+
+            static int[] w=new int[N];
+            static int[][] dp=new int[N][100010];
+
+            public static void main(String[] args)throws Exception{
+                BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+                int n=Integer.parseInt(br.readLine());
+
+                StringTokenizer st=new StringTokenizer(br.readLine());
+
+                int sum=0;
+                for(int i=1;i<=n;i++){
+                    w[i]=Integer.parseInt(st.nextToken());
+                    sum+=w[i];
+                }
+
+                dp[0][0]=1;
+
+                for(int i=1;i<=n;i++){
+                    for(int j=0;j<=sum;j++){
+                        dp[i][j]|=dp[i-1][j];
+                        dp[i][j]|=dp[i-1][Math.abs(j-w[i])];
+                        if(j+w[i]<=sum){
+                            dp[i][j]|=dp[i-1][j+w[i]];
+                        }
+                    }
+                }
+
+                int ans=0;
+                for(int i=1;i<=sum;i++){
+                    if(dp[n][i]==1) ans++;
+                }
+
+                System.out.print(ans);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        n=int(input())
+        w=[0]+list(map(int,input().split()))
+
+        s=sum(w)
+
+        dp=[[0]*100010 for _ in range(n+1)]
+        dp[0][0]=1
+
+        for i in range(1,n+1):
+            for j in range(s+1):
+                dp[i][j]|=dp[i-1][j]
+                dp[i][j]|=dp[i-1][abs(j-w[i])]
+                if j+w[i]<=s:
+                    dp[i][j]|=dp[i-1][j+w[i]]
+
+        ans=0
+        for i in range(1,s+1):
+            if dp[n][i]:
+                ans+=1
+
+        print(ans)
+        ```
