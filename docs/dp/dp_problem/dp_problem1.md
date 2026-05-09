@@ -519,3 +519,90 @@
 
         print(dp[n])
         ```
+??? example "必须选第 i 个"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N=1e6+10;
+        const int MOD=1e9+7;
+
+        int dp[N],s[N];
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            int n,k;
+            cin>>n>>k;
+
+            for(int i=1;i<=k+1;i++){
+                dp[i]=1;
+                s[i]=(dp[i]+s[i-1])%MOD;
+            }
+
+            for(int i=k+2;i<=n;i++){
+                dp[i]=(s[i-k-1]+1)%MOD;
+                s[i]=(dp[i]+s[i-1])%MOD;
+            }
+
+            cout<<(s[n]+1)%MOD;
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.io.*;
+        import java.util.*;
+
+        public class Main{
+            static final int N=1000000+10;
+            static final int MOD=1000000007;
+
+            static int[] dp=new int[N];
+            static int[] s=new int[N];
+
+            public static void main(String[] args)throws Exception{
+                BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+                StringTokenizer st=new StringTokenizer(br.readLine());
+
+                int n=Integer.parseInt(st.nextToken());
+                int k=Integer.parseInt(st.nextToken());
+
+                for(int i=1;i<=k+1;i++){
+                    dp[i]=1;
+                    s[i]=(dp[i]+s[i-1])%MOD;
+                }
+
+                for(int i=k+2;i<=n;i++){
+                    dp[i]=(s[i-k-1]+1)%MOD;
+                    s[i]=(dp[i]+s[i-1])%MOD;
+                }
+
+                System.out.print((s[n]+1)%MOD);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        MOD=10**9+7
+
+        n,k=map(int,input().split())
+
+        dp=[0]*(n+1)
+        s=[0]*(n+1)
+
+        for i in range(1,k+2):
+            dp[i]=1
+            s[i]=(dp[i]+s[i-1])%MOD
+
+        for i in range(k+2,n+1):
+            dp[i]=(s[i-k-1]+1)%MOD
+            s[i]=(dp[i]+s[i-1])%MOD
+
+        print((s[n]+1)%MOD)
+        ```
