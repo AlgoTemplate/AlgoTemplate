@@ -429,3 +429,93 @@
 
         print(ans)
         ```
+
+#### 第五题
+
+[自建OJ：安全序列](http://47.121.118.174/p/466)
+
+#### 代码实现
+
+??? example "选和不选"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int MOD=1e9+7;
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            int n,k;
+            cin>>n>>k;
+
+            vector<int> dp(n+1);
+            dp[0]=1;
+
+            for(int i=1;i<=n;i++){
+                dp[i]=dp[i-1];
+                if(i-k-1>=1){
+                    dp[i]=(dp[i]+dp[i-k-1])%MOD;
+                }else{
+                    dp[i]=(dp[i-1]+1)%MOD;
+                }
+            }
+
+            cout<<dp[n]<<"\n";
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.io.*;
+        import java.util.*;
+
+        public class Main{
+            static final int MOD=1000000007;
+
+            public static void main(String[] args)throws Exception{
+                BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+                StringTokenizer st=new StringTokenizer(br.readLine());
+
+                int n=Integer.parseInt(st.nextToken());
+                int k=Integer.parseInt(st.nextToken());
+
+                int[] dp=new int[n+1];
+                dp[0]=1;
+
+                for(int i=1;i<=n;i++){
+                    dp[i]=dp[i-1];
+                    if(i-k-1>=1){
+                        dp[i]=(dp[i]+dp[i-k-1])%MOD;
+                    }else{
+                        dp[i]=(dp[i-1]+1)%MOD;
+                    }
+                }
+
+                System.out.println(dp[n]);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        MOD=10**9+7
+
+        n,k=map(int,input().split())
+
+        dp=[0]*(n+1)
+        dp[0]=1
+
+        for i in range(1,n+1):
+            dp[i]=dp[i-1]
+            if i-k-1>=1:
+                dp[i]=(dp[i]+dp[i-k-1])%MOD
+            else:
+                dp[i]=(dp[i-1]+1)%MOD
+
+        print(dp[n])
+        ```
