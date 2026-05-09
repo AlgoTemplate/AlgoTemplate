@@ -529,26 +529,26 @@
         const int N=1e6+10;
         const int MOD=1e9+7;
 
+        int n,k;
         int dp[N],s[N];
 
         int main(){
             ios::sync_with_stdio(false);
             cin.tie(0);
 
-            int n,k;
             cin>>n>>k;
 
-            for(int i=1;i<=k+1;i++){
+            int ans=1;
+            for(int i=1;i<=n;i++){
                 dp[i]=1;
-                s[i]=(dp[i]+s[i-1])%MOD;
+                if(i>k+1){
+                    dp[i]=(dp[i]+s[i-k-1])%MOD;
+                }
+                s[i]=(s[i-1]+dp[i])%MOD;
+                ans=(ans+dp[i])%MOD;
             }
 
-            for(int i=k+2;i<=n;i++){
-                dp[i]=(s[i-k-1]+1)%MOD;
-                s[i]=(dp[i]+s[i-1])%MOD;
-            }
-
-            cout<<(s[n]+1)%MOD;
+            cout<<ans;
             return 0;
         }
         ```
@@ -572,17 +572,17 @@
                 int n=Integer.parseInt(st.nextToken());
                 int k=Integer.parseInt(st.nextToken());
 
-                for(int i=1;i<=k+1;i++){
+                int ans=1;
+                for(int i=1;i<=n;i++){
                     dp[i]=1;
-                    s[i]=(dp[i]+s[i-1])%MOD;
+                    if(i>k+1){
+                        dp[i]=(dp[i]+s[i-k-1])%MOD;
+                    }
+                    s[i]=(s[i-1]+dp[i])%MOD;
+                    ans=(ans+dp[i])%MOD;
                 }
 
-                for(int i=k+2;i<=n;i++){
-                    dp[i]=(s[i-k-1]+1)%MOD;
-                    s[i]=(dp[i]+s[i-1])%MOD;
-                }
-
-                System.out.print((s[n]+1)%MOD);
+                System.out.print(ans);
             }
         }
         ```
@@ -596,13 +596,13 @@
         dp=[0]*(n+1)
         s=[0]*(n+1)
 
-        for i in range(1,k+2):
+        ans=1
+        for i in range(1,n+1):
             dp[i]=1
-            s[i]=(dp[i]+s[i-1])%MOD
+            if i>k+1:
+                dp[i]=(dp[i]+s[i-k-1])%MOD
+            s[i]=(s[i-1]+dp[i])%MOD
+            ans=(ans+dp[i])%MOD
 
-        for i in range(k+2,n+1):
-            dp[i]=(s[i-k-1]+1)%MOD
-            s[i]=(dp[i]+s[i-1])%MOD
-
-        print((s[n]+1)%MOD)
+        print(ans)
         ```
