@@ -606,3 +606,104 @@
 
         print(ans)
         ```
+#### 第六题
+
+[自建OJ：数组选数](http://47.121.118.174/p/737)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N=2e5+10;
+
+        int n;
+        int a[N],dp[N];
+
+        void solve(){
+            cin>>n;
+
+            for(int i=1;i<=n;i++){
+                cin>>a[i];
+                dp[i]=0;
+            }
+
+            dp[1]=a[1];
+            for(int i=2;i<=n;i++){
+                dp[i]=max(dp[i-1],dp[i-2]+a[i]);
+            }
+
+            cout<<dp[n]<<"\n";
+        }
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            int t;
+            cin>>t;
+            while(t--) solve();
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.io.*;
+        import java.util.*;
+
+        public class Main{
+            static final int N=200000+10;
+
+            static int[] a=new int[N];
+            static int[] dp=new int[N];
+
+            static void solve(BufferedReader br)throws Exception{
+                int n=Integer.parseInt(br.readLine());
+                StringTokenizer st=new StringTokenizer(br.readLine());
+
+                for(int i=1;i<=n;i++){
+                    a[i]=Integer.parseInt(st.nextToken());
+                    dp[i]=0;
+                }
+
+                dp[1]=a[1];
+                for(int i=2;i<=n;i++){
+                    dp[i]=Math.max(dp[i-1],dp[i-2]+a[i]);
+                }
+
+                System.out.println(dp[n]);
+            }
+
+            public static void main(String[] args)throws Exception{
+                BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+                int t=Integer.parseInt(br.readLine());
+                while(t-->0){
+                    solve(br);
+                }
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        for _ in range(int(input())):
+            n=int(input())
+            a=[0]+list(map(int,input().split()))
+            dp=[0]*(n+1)
+
+            dp[1]=a[1]
+            for i in range(2,n+1):
+                dp[i]=max(dp[i-1],dp[i-2]+a[i])
+
+            print(dp[n])
+        ```
