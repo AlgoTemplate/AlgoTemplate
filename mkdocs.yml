@@ -145,7 +145,9 @@ nav:
       - 枚举题单（苯环）: blue_bridge_cup/special/yevegetable_enumeration.md
     - 焚决:
       - 根据数据范围判断算法: blue_bridge_cup/other/data.md
-    
+  - 码蹄杯:
+    - 2026年码蹄杯:
+      - 本科组第一场: mati_cup/2026th/2026_1.md
   - 其他:
     - 快读: other/quick_read.md
     - 对拍: other/checkin.md
