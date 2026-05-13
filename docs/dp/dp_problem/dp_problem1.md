@@ -707,3 +707,108 @@
 
             print(dp[n])
         ```
+
+#### 第七题
+
+[自建OJ：在明日玩原神](http://47.121.118.174/p/472)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N=1e5+10;
+
+        int n;
+        int a[N],b[N];
+        int dp[N][3][3];
+
+        void solve(){
+            cin>>n;
+
+            for(int i=1;i<=n;i++) cin>>a[i];
+            for(int i=1;i<=n;i++) cin>>b[i];
+
+            for(int i=1;i<=n;i++){
+                dp[i][1][0]=max(dp[i-1][0][1]+a[i],dp[i-1][0][2]+a[i]);
+                dp[i][2][0]=dp[i-1][1][0]+a[i];
+                dp[i][0][1]=max(dp[i-1][1][0]+b[i],dp[i-1][2][0]+b[i]);
+                dp[i][0][2]=dp[i-1][0][1]+b[i];
+            }
+
+            cout<<max({dp[n][0][1],dp[n][0][2],dp[n][1][0],dp[n][2][0]});
+        }
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            solve();
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+            static final int N=100000+10;
+
+            static int[] a=new int[N];
+            static int[] b=new int[N];
+            static int[][][] dp=new int[N][3][3];
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                int n=in.nextInt();
+
+                for(int i=1;i<=n;i++) a[i]=in.nextInt();
+                for(int i=1;i<=n;i++) b[i]=in.nextInt();
+
+                for(int i=1;i<=n;i++){
+                    dp[i][1][0]=Math.max(dp[i-1][0][1]+a[i],dp[i-1][0][2]+a[i]);
+                    dp[i][2][0]=dp[i-1][1][0]+a[i];
+                    dp[i][0][1]=Math.max(dp[i-1][1][0]+b[i],dp[i-1][2][0]+b[i]);
+                    dp[i][0][2]=dp[i-1][0][1]+b[i];
+                }
+
+                int ans=Math.max(
+                    Math.max(dp[n][0][1],dp[n][0][2]),
+                    Math.max(dp[n][1][0],dp[n][2][0])
+                );
+
+                System.out.print(ans);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        n=int(input())
+        a=[0]+list(map(int,input().split()))
+        b=[0]+list(map(int,input().split()))
+
+        dp=[[[0]*3 for _ in range(3)] for _ in range(n+1)]
+
+        for i in range(1,n+1):
+            dp[i][1][0]=max(dp[i-1][0][1]+a[i],dp[i-1][0][2]+a[i])
+            dp[i][2][0]=dp[i-1][1][0]+a[i]
+            dp[i][0][1]=max(dp[i-1][1][0]+b[i],dp[i-1][2][0]+b[i])
+            dp[i][0][2]=dp[i-1][0][1]+b[i]
+
+        print(max(
+            dp[n][0][1],
+            dp[n][0][2],
+            dp[n][1][0],
+            dp[n][2][0]
+        ))
+        ```
