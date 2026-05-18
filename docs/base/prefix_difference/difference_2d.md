@@ -103,15 +103,17 @@
     === "Python"
         ```python
         n, m, q = map(int, input().split())
-        a = [[0] * (m + 1) for _ in range(n + 1)]
-        b = [[0] * (m + 1) for _ in range(n + 1)]
+        a = [[0] * (m + 2) for _ in range(n + 2)]
+        b = [[0] * (m + 2) for _ in range(n + 2)]
 
+        # 读取初始矩阵，并构造二维差分
         for i in range(1, n + 1):
             row = list(map(int, input().split()))
             for j in range(1, m + 1):
                 a[i][j] = row[j - 1]
                 b[i][j] = a[i][j] - a[i - 1][j] - a[i][j - 1] + a[i - 1][j - 1]
 
+        # 处理 q 次区间加法
         for _ in range(q):
             x1, y1, x2, y2, d = map(int, input().split())
             b[x1][y1] += d
@@ -119,10 +121,11 @@
             b[x1][y2 + 1] -= d
             b[x2 + 1][y2 + 1] += d
 
+        # 恢复矩阵并输出
         for i in range(1, n + 1):
             for j in range(1, m + 1):
                 b[i][j] = b[i][j] + b[i - 1][j] + b[i][j - 1] - b[i - 1][j - 1]
-                print(b[i][j], end=" ")
+                print(b[i][j], end=" " if j < m else "")
             print()
         ```
         
