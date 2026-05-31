@@ -904,3 +904,112 @@
 
         print(f[n][m])
         ```
+
+#### 第九题
+
+[自建OJ：数组切分](http://47.121.118.174/p/551)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int N=10010;
+        const int mod=1e9+7;
+
+        int n;
+        int a[N];
+        int dp[N];
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            cin>>n;
+            for(int i=1;i<=n;i++) cin>>a[i];
+
+            dp[0]=1;
+
+            for(int i=1;i<=n;i++){
+                int mi=N,mx=0;
+                for(int j=i;j>=1;j--){
+                    mi=min(mi,a[j]);
+                    mx=max(mx,a[j]);
+
+                    if(mx-mi+1==i-j+1){
+                        dp[i]=(dp[i]+dp[j-1])%mod;
+                    }
+                }
+            }
+
+            cout<<dp[n];
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+            static final int N=10010;
+            static final int mod=1000000007;
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                int n=in.nextInt();
+
+                int[] a=new int[N];
+                int[] dp=new int[N];
+
+                for(int i=1;i<=n;i++) a[i]=in.nextInt();
+
+                dp[0]=1;
+
+                for(int i=1;i<=n;i++){
+                    int mi=N,mx=0;
+
+                    for(int j=i;j>=1;j--){
+                        mi=Math.min(mi,a[j]);
+                        mx=Math.max(mx,a[j]);
+
+                        if(mx-mi+1==i-j+1){
+                            dp[i]=(dp[i]+dp[j-1])%mod;
+                        }
+                    }
+                }
+
+                System.out.print(dp[n]);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        mod=10**9+7
+        N=10010
+
+        n=int(input())
+        a=[0]+list(map(int,input().split()))
+
+        dp=[0]*N
+        dp[0]=1
+
+        for i in range(1,n+1):
+            mi=N
+            mx=0
+
+            for j in range(i,0,-1):
+                mi=min(mi,a[j])
+                mx=max(mx,a[j])
+
+                if mx-mi+1==i-j+1:
+                    dp[i]=(dp[i]+dp[j-1])%mod
+
+        print(dp[n])
+        ```
