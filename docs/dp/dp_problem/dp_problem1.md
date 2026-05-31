@@ -812,3 +812,95 @@
             dp[n][2][0]
         ))
         ```
+#### 第八题
+
+[洛谷：摆花](https://www.luogu.com.cn/problem/P1077)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        const int mod=1e6+7;
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            int n,m;
+            cin>>n>>m;
+
+            vector<int> a(n+1);
+            vector<vector<int>> f(n+1,vector<int>(m+1));
+
+            f[0][0]=1;
+
+            for(int i=1;i<=n;i++) cin>>a[i];
+
+            for(int i=1;i<=n;i++){
+                for(int j=0;j<=m;j++){
+                    for(int k=0;k<=min(j,a[i]);k++){
+                        f[i][j]=(f[i][j]+f[i-1][j-k])%mod;
+                    }
+                }
+            }
+
+            cout<<f[n][m];
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+            static final int mod=1000007;
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                int n=in.nextInt();
+                int m=in.nextInt();
+
+                int[] a=new int[n+1];
+                int[][] f=new int[n+1][m+1];
+
+                f[0][0]=1;
+
+                for(int i=1;i<=n;i++) a[i]=in.nextInt();
+
+                for(int i=1;i<=n;i++){
+                    for(int j=0;j<=m;j++){
+                        for(int k=0;k<=Math.min(j,a[i]);k++){
+                            f[i][j]=(f[i][j]+f[i-1][j-k])%mod;
+                        }
+                    }
+                }
+
+                System.out.print(f[n][m]);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        mod=1000007
+
+        n,m=map(int,input().split())
+        a=[0]+list(map(int,input().split()))
+
+        f=[[0]*(m+1) for _ in range(n+1)]
+        f[0][0]=1
+
+        for i in range(1,n+1):
+            for j in range(m+1):
+                for k in range(min(j,a[i])+1):
+                    f[i][j]=(f[i][j]+f[i-1][j-k])%mod
+
+        print(f[n][m])
+        ```
