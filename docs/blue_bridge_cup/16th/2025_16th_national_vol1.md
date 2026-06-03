@@ -114,3 +114,399 @@
 
         print(dfs(1,4,2))
         ```
+#### 第二题
+
+[互质藏卡](https://www.lanqiao.cn/problems/21262/learning/)
+
+#### 代码实现
+
+??? example "5分"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+        typedef long long ll;
+
+        const int N=17600;
+        const int mod=1e9+7;
+
+        bool check(int x){
+            for(int i=2;i*i<=x;i++){
+                if(x%i==0) return false;
+            }
+            return true;
+        }
+
+        int calc(int x){
+            int res=1;
+            ll a=x;
+
+            while(a<=N){
+                a=a*x;
+                if(a>N) break;
+                res++;
+            }
+
+            return res;
+        }
+
+        int main(){
+            ll ans=1;
+
+            for(int i=2;i<=N;i++){
+                if(check(i)){
+                    int t=calc(i);
+                    ans=ans*t%mod;
+                }
+            }
+
+            cout<<ans;
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+
+            static final int N=17600;
+            static final long mod=1000000007L;
+
+            static boolean check(int x){
+                for(int i=2;i*i<=x;i++){
+                    if(x%i==0) return false;
+                }
+                return true;
+            }
+
+            static int calc(int x){
+                int res=1;
+                long a=x;
+
+                while(a<=N){
+                    a*=x;
+                    if(a>N) break;
+                    res++;
+                }
+
+                return res;
+            }
+
+            public static void main(String[] args){
+                long ans=1;
+
+                for(int i=2;i<=N;i++){
+                    if(check(i)){
+                        int t=calc(i);
+                        ans=ans*t%mod;
+                    }
+                }
+
+                System.out.print(ans);
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        N=17600
+        MOD=10**9+7
+
+        def check(x):
+            i=2
+            while i*i<=x:
+                if x%i==0:
+                    return False
+                i+=1
+            return True
+
+        def calc(x):
+            res=1
+            a=x
+
+            while a<=N:
+                a*=x
+                if a>N:
+                    break
+                res+=1
+
+            return res
+
+        ans=1
+
+        for i in range(2,N+1):
+            if check(i):
+                ans=ans*calc(i)%MOD
+
+        print(ans)
+        ```
+#### 第三题
+[数字轮盘](https://www.lanqiao.cn/problems/21261/learning/)
+#### 代码实现
+
+??? example "4分"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        #define fi first
+        #define se second
+        using namespace std;
+
+        typedef long long ll;
+
+        int testcase=1;
+
+        void solve(){
+            int n,k;
+            cin>>n>>k;
+
+            k%=n;
+
+            int d=n+1;
+            for(int i=k;i>=1;i--,d--);
+
+            int res=0;
+
+            if(k==0){
+                cout<<0<<"\n";
+                return;
+            }
+
+            while(d!=1 && res<=n){
+                d=((d-2)%n+n)%n;
+                if(d==0) d=n;
+                res++;
+            }
+
+            if(res==n+1) res=-1;
+
+            cout<<res<<"\n";
+        }
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            int t;
+            cin>>t;
+
+            for(;testcase<=t;testcase++){
+                solve();
+            }
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+
+            static int testcase=1;
+
+            static void solve(Scanner in){
+                int n=in.nextInt();
+                int k=in.nextInt();
+
+                k%=n;
+
+                int d=n+1;
+                for(int i=k;i>=1;i--,d--);
+
+                int res=0;
+
+                if(k==0){
+                    System.out.println(0);
+                    return;
+                }
+
+                while(d!=1 && res<=n){
+                    d=((d-2)%n+n)%n;
+                    if(d==0) d=n;
+                    res++;
+                }
+
+                if(res==n+1) res=-1;
+
+                System.out.println(res);
+            }
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                int t=in.nextInt();
+
+                for(;testcase<=t;testcase++){
+                    solve(in);
+                }
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        t=int(input())
+
+        for _ in range(t):
+            n,k=map(int,input().split())
+
+            k%=n
+
+            d=n+1
+            for _ in range(k):
+                d-=1
+
+            res=0
+
+            if k==0:
+                print(0)
+                continue
+
+            while d!=1 and res<=n:
+                d=((d-2)%n+n)%n
+                if d==0:
+                    d=n
+                res+=1
+
+            if res==n+1:
+                res=-1
+
+            print(res)
+        ```
+??? example "10分"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        #define fi first
+        #define se second
+        using namespace std;
+
+        typedef long long ll;
+
+        int testcase=1;
+
+        void solve(){
+            int n,k;
+            cin>>n>>k;
+
+            k%=n;
+
+            int h=((1-k)%n+n)%n;
+
+            if(k==0){
+                cout<<0<<"\n";
+                return;
+            }
+
+            if(n%2==0 && h%2==0){
+                cout<<-1<<"\n";
+                return;
+            }
+
+            if(h%2==1){
+                cout<<h/2<<"\n";
+                return;
+            }
+
+            cout<<h/2+n/2<<"\n";
+        }
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            int t;
+            cin>>t;
+
+            for(;testcase<=t;testcase++){
+                solve();
+            }
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+
+            static int testcase=1;
+
+            static void solve(Scanner in){
+                int n=in.nextInt();
+                int k=in.nextInt();
+
+                k%=n;
+
+                int h=((1-k)%n+n)%n;
+
+                if(k==0){
+                    System.out.println(0);
+                    return;
+                }
+
+                if(n%2==0 && h%2==0){
+                    System.out.println(-1);
+                    return;
+                }
+
+                if(h%2==1){
+                    System.out.println(h/2);
+                    return;
+                }
+
+                System.out.println(h/2+n/2);
+            }
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                int t=in.nextInt();
+
+                for(;testcase<=t;testcase++){
+                    solve(in);
+                }
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        t=int(input())
+
+        for _ in range(t):
+            n,k=map(int,input().split())
+
+            k%=n
+
+            h=((1-k)%n+n)%n
+
+            if k==0:
+                print(0)
+                continue
+
+            if n%2==0 and h%2==0:
+                print(-1)
+                continue
+
+            if h%2==1:
+                print(h//2)
+                continue
+
+            print(h//2+n//2)
+        ```
