@@ -510,3 +510,139 @@
 
             print(h//2+n//2)
         ```
+
+#### 第四题
+
+[斐波那契字符串](https://www.lanqiao.cn/problems/21260/learning/)
+
+#### 代码实现
+
+??? example "10分"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        #define fi first
+        #define se second
+        using namespace std;
+
+        typedef long long ll;
+
+        const int N=1e5+10;
+        const int mod=1e9+7;
+
+        struct node{
+            ll c0,c1,ans;
+        }f[N];
+
+        int testcase=1;
+
+        void init(){
+            f[1]={1,0,0};
+            f[2]={0,1,0};
+
+            for(int i=3;i<N;i++){
+                f[i].c0=(f[i-1].c0+f[i-2].c0)%mod;
+                f[i].c1=(f[i-1].c1+f[i-2].c1)%mod;
+                f[i].ans=(f[i-1].ans+f[i-2].ans+f[i-1].c0*f[i-2].c1)%mod;
+            }
+        }
+
+        void solve(){
+            int n;
+            cin>>n;
+
+            cout<<f[n].ans<<"\n";
+        }
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            int t;
+            cin>>t;
+
+            init();
+
+            for(;testcase<=t;testcase++){
+                solve();
+            }
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+
+            static final int N=100010;
+            static final long mod=1000000007L;
+
+            static class Node{
+                long c0,c1,ans;
+
+                Node(long c0,long c1,long ans){
+                    this.c0=c0;
+                    this.c1=c1;
+                    this.ans=ans;
+                }
+            }
+
+            static Node[] f=new Node[N];
+
+            static void init(){
+                for(int i=0;i<N;i++){
+                    f[i]=new Node(0,0,0);
+                }
+
+                f[1]=new Node(1,0,0);
+                f[2]=new Node(0,1,0);
+
+                for(int i=3;i<N;i++){
+                    f[i].c0=(f[i-1].c0+f[i-2].c0)%mod;
+                    f[i].c1=(f[i-1].c1+f[i-2].c1)%mod;
+                    f[i].ans=(f[i-1].ans+f[i-2].ans+f[i-1].c0*f[i-2].c1)%mod;
+                }
+            }
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                int t=in.nextInt();
+
+                init();
+
+                while(t-->0){
+                    int n=in.nextInt();
+                    System.out.println(f[n].ans);
+                }
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        MOD=10**9+7
+        N=100010
+
+        c0=[0]*N
+        c1=[0]*N
+        ans=[0]*N
+
+        c0[1]=1
+        c1[2]=1
+
+        for i in range(3,N):
+            c0[i]=(c0[i-1]+c0[i-2])%MOD
+            c1[i]=(c1[i-1]+c1[i-2])%MOD
+            ans[i]=(ans[i-1]+ans[i-2]+c0[i-1]*c1[i-2])%MOD
+
+        t=int(input())
+
+        for _ in range(t):
+            n=int(input())
+            print(ans[n])
+        ```
