@@ -93,6 +93,8 @@ nav:
       - 01 背包: dp/knapsack/01_knapsack.md
     - 线性动态规划: 
       - 最长上升子序列: dp/linear/lis.md
+    - 状态压缩 dp: 
+      - 旅行商问题: dp/bitmask/TSP.md
     - dp 基础题专讲: 
       - 简介: dp/dp_problem/index.md
       - 基础 30 题系列1: dp/dp_problem/dp_problem1.md
