@@ -290,3 +290,174 @@
             else:
                 print("No")
         ```
+#### 例题3
+
+[自建OJ：字符串哈希匹配字符串2](http://47.121.118.174/p/81)
+
+#### 代码实现
+
+??? example "参考实现"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        typedef long long ll;
+
+        const int N=2e5+10;
+
+        const int B[2]={131,13331};
+        const int mod[2]={998244353,1000000007};
+
+        ll pre[N][2],base[N][2];
+
+        int n,q;
+        string s;
+
+        void init(){
+            for(int j=0;j<=1;j++){
+                base[0][j]=1;
+
+                for(int i=1;i<=n;i++){
+                    pre[i][j]=(pre[i-1][j]*B[j]+s[i])%mod[j];
+                    base[i][j]=(base[i-1][j]*B[j])%mod[j];
+                }
+            }
+        }
+
+        ll getH(int l,int r,int idx){
+            return ((pre[r][idx]-pre[l-1][idx]*base[r-l+1][idx])%mod[idx]+mod[idx])%mod[idx];
+        }
+
+        bool check(int l1,int r1,int l2,int r2){
+            for(int i=0;i<=1;i++){
+                if(getH(l1,r1,i)!=getH(l2,r2,i)) return false;
+            }
+            return true;
+        }
+
+        int main(){
+            ios::sync_with_stdio(false);
+            cin.tie(0);
+
+            cin>>n>>q;
+            cin>>s;
+
+            s=" "+s;
+
+            init();
+
+            while(q--){
+                int l1,r1,l2,r2;
+                cin>>l1>>r1>>l2>>r2;
+
+                if(check(l1,r1,l2,r2)) cout<<"Yes\n";
+                else cout<<"No\n";
+            }
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+
+            static final int N=200010;
+
+            static final long[] B={131,13331};
+            static final long[] mod={998244353L,1000000007L};
+
+            static long[][] pre=new long[N][2];
+            static long[][] base=new long[N][2];
+
+            static int n,q;
+            static String s;
+
+            static void init(){
+                for(int j=0;j<2;j++){
+                    base[0][j]=1;
+
+                    for(int i=1;i<=n;i++){
+                        pre[i][j]=(pre[i-1][j]*B[j]+s.charAt(i))%mod[j];
+                        base[i][j]=(base[i-1][j]*B[j])%mod[j];
+                    }
+                }
+            }
+
+            static long getH(int l,int r,int idx){
+                return ((pre[r][idx]-pre[l-1][idx]*base[r-l+1][idx])%mod[idx]+mod[idx])%mod[idx];
+            }
+
+            static boolean check(int l1,int r1,int l2,int r2){
+                for(int i=0;i<=1;i++){
+                    if(getH(l1,r1,i)!=getH(l2,r2,i)) return false;
+                }
+                return true;
+            }
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                n=in.nextInt();
+                q=in.nextInt();
+
+                s=" "+in.next();
+
+                init();
+
+                while(q-->0){
+                    int l1=in.nextInt();
+                    int r1=in.nextInt();
+                    int l2=in.nextInt();
+                    int r2=in.nextInt();
+
+                    if(check(l1,r1,l2,r2)){
+                        System.out.println("Yes");
+                    }else{
+                        System.out.println("No");
+                    }
+                }
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        input=sys.stdin.readline
+
+        B=[131,13331]
+        MOD=[998244353,1000000007]
+
+        n,q=map(int,input().split())
+        s=" "+input().strip()
+
+        pre=[[0]*2 for _ in range(n+1)]
+        base=[[0]*2 for _ in range(n+1)]
+
+        def init():
+            for j in range(2):
+                base[0][j]=1
+                for i in range(1,n+1):
+                    pre[i][j]=(pre[i-1][j]*B[j]+ord(s[i]))%MOD[j]
+                    base[i][j]=(base[i-1][j]*B[j])%MOD[j]
+
+        def getH(l,r,idx):
+            return (pre[r][idx]-pre[l-1][idx]*base[r-l+1][idx])%MOD[idx]
+
+        def check(l1,r1,l2,r2):
+            for i in range(2):
+                if getH(l1,r1,i)!=getH(l2,r2,i):
+                    return False
+            return True
+
+        init()
+
+        for _ in range(q):
+            l1,r1,l2,r2=map(int,input().split())
+            print("Yes" if check(l1,r1,l2,r2) else "No")
+        ```
