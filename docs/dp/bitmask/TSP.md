@@ -117,7 +117,7 @@
         ```python
         import sys
         sys.setrecursionlimit(10**7)
-
+        # python 语言记忆化搜索比较慢
         INF=10**9
 
         n=int(input())
