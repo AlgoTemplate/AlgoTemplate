@@ -646,3 +646,181 @@
             n=int(input())
             print(ans[n])
         ```
+
+#### 第五题
+
+[项链排列](https://www.lanqiao.cn/problems/21259/learning/)
+
+#### 代码实现
+
+??? example "3分"
+
+    === "C++"
+        ```cpp
+        #include<bits/stdc++.h>
+        using namespace std;
+
+        int A,B,C;
+        string ans;
+
+        // dp[a][b][c][pre]
+        // -1: 未计算, 0: 不可达, 1: 可达
+        int dp[110][110][210][3];
+
+        bool dfs(int a,int b,int c,int pre){
+            if(a==A && b==B){
+                return c==C;
+            }
+
+            if(c>C) return false;
+
+            if(dp[a][b][c][pre]!=-1){
+                return dp[a][b][c][pre]==1;
+            }
+
+            if(a<A){
+                ans.push_back('L');
+                if(dfs(a+1,b,c+(pre==0?1:0),1)){
+                    return dp[a][b][c][pre]=1;
+                }
+                ans.pop_back();
+            }
+
+            if(b<B){
+                ans.push_back('Q');
+                if(dfs(a,b+1,c+(pre==1?1:0),0)){
+                    return dp[a][b][c][pre]=1;
+                }
+                ans.pop_back();
+            }
+
+            dp[a][b][c][pre]=0;
+            return false;
+        }
+
+        int main(){
+            memset(dp,-1,sizeof dp);
+
+            cin>>A>>B>>C;
+
+            if(dfs(0,0,0,2)) cout<<ans;
+            else cout<<-1;
+
+            return 0;
+        }
+        ```
+
+    === "Java"
+        ```java
+        import java.util.*;
+
+        public class Main{
+
+            static int A,B,C;
+
+            static StringBuilder ans=new StringBuilder();
+
+            // dp[a][b][c][pre]
+            // -1: 未访问, 0: 不可达, 1: 可达
+            static int[][][][] dp=new int[110][110][210][3];
+
+            static boolean dfs(int a,int b,int c,int pre){
+                if(a==A && b==B){
+                    return c==C;
+                }
+
+                if(c>C) return false;
+
+                if(dp[a][b][c][pre]!=-1){
+                    return dp[a][b][c][pre]==1;
+                }
+
+                if(a<A){
+                    ans.append('L');
+                    if(dfs(a+1,b,c+(pre==0?1:0),1)){
+                        dp[a][b][c][pre]=1;
+                        return true;
+                    }
+                    ans.deleteCharAt(ans.length()-1);
+                }
+
+                if(b<B){
+                    ans.append('Q');
+                    if(dfs(a,b+1,c+(pre==1?1:0),0)){
+                        dp[a][b][c][pre]=1;
+                        return true;
+                    }
+                    ans.deleteCharAt(ans.length()-1);
+                }
+
+                dp[a][b][c][pre]=0;
+                return false;
+            }
+
+            public static void main(String[] args){
+                Scanner in=new Scanner(System.in);
+
+                for(int i=0;i<110;i++){
+                    for(int j=0;j<110;j++){
+                        for(int k=0;k<210;k++){
+                            Arrays.fill(dp[i][j][k],-1);
+                        }
+                    }
+                }
+
+                A=in.nextInt();
+                B=in.nextInt();
+                C=in.nextInt();
+
+                if(dfs(0,0,0,2)){
+                    System.out.print(ans.toString());
+                }else{
+                    System.out.print(-1);
+                }
+            }
+        }
+        ```
+
+    === "Python"
+        ```python
+        import sys
+        sys.setrecursionlimit(10**7)
+
+        A,B,C=map(int,input().split())
+
+        dp=[[[[-1]*3 for _ in range(210)] for _ in range(110)] for _ in range(110)]
+
+        ans=[]
+
+        def dfs(a,b,c,pre):
+            if a==A and b==B:
+                return c==C
+
+            if c>C:
+                return False
+
+            if dp[a][b][c][pre]!=-1:
+                return dp[a][b][c][pre]==1
+
+            if a<A:
+                ans.append('L')
+                if dfs(a+1,b,c+(1 if pre==0 else 0),1):
+                    dp[a][b][c][pre]=1
+                    return True
+                ans.pop()
+
+            if b<B:
+                ans.append('Q')
+                if dfs(a,b+1,c+(1 if pre==1 else 0),0):
+                    dp[a][b][c][pre]=1
+                    return True
+                ans.pop()
+
+            dp[a][b][c][pre]=0
+            return False
+
+        if dfs(0,0,0,2):
+            print("".join(ans))
+        else:
+            print(-1)
+        ```
