@@ -112,6 +112,7 @@ nav:
   - 字符串:
     - 字符串部分简介: string/index.md
     - 字符串哈希: string/string_hash.md
+    - 字典树: string/trie.md
   - 图论:
     - 图论部分简介: graph/index.md
     # - 图的存储: graph/graph_storage.md
